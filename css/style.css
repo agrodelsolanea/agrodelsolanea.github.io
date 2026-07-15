@@ -1,0 +1,231 @@
+/* AGRODEL Agropecuária — identidade: verde escuro + verde vivo + amarelo do logo */
+:root {
+  --verde-950: #102e18;
+  --verde-900: #16401f;
+  --verde-700: #1e5b2e;
+  --verde-500: #2e7d32;
+  --verde-vivo: #6fce4e;
+  --amarelo: #ffc72c;
+  --creme: #f7f5ee;
+  --branco: #ffffff;
+  --ink: #21301f;
+  --cinza: #5c6b58;
+  --sombra: 0 10px 30px rgba(16, 46, 24, .12);
+  --raio: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Archivo', system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--branco);
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.container { width: min(1140px, 92%); margin-inline: auto; }
+.centro { text-align: center; }
+
+h1, h2 { font-family: 'Archivo Black', 'Archivo', sans-serif; line-height: 1.12; }
+h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
+.secao-sub { color: var(--cinza); max-width: 640px; margin: 0 auto 2.4rem; }
+
+.rotulo {
+  display: inline-block; font-weight: 700; font-size: .78rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--verde-500); margin-bottom: .7rem;
+}
+.rotulo.centro { display: block; }
+.rotulo.claro { color: var(--verde-vivo); }
+
+/* Botões */
+.btn {
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: .85rem 1.5rem; border-radius: 999px; font-weight: 700;
+  text-decoration: none; font-size: .98rem; transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: var(--sombra); }
+.btn-amarelo { background: var(--amarelo); color: var(--verde-950); }
+.btn-verde { background: var(--verde-700); color: var(--branco); }
+.btn-zap { background: #25d366; color: #073d1c; }
+.btn-contorno { border: 2px solid rgba(255,255,255,.75); color: var(--branco); }
+.btn-contorno:hover { background: rgba(255,255,255,.12); }
+.btn.grande { padding: 1rem 1.9rem; font-size: 1.05rem; }
+
+/* Topo */
+.topo {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(16, 46, 24, .92); backdrop-filter: blur(8px);
+}
+.topo-inner { display: flex; align-items: center; gap: 1.5rem; padding: .65rem 0; }
+.marca-logo { height: 44px; width: auto; }
+.menu { display: flex; gap: 1.4rem; margin-left: auto; }
+.menu a {
+  color: #e8f3e6; text-decoration: none; font-weight: 600; font-size: .95rem;
+  padding: .3rem 0; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s;
+}
+.menu a:hover { color: var(--amarelo); border-color: var(--amarelo); }
+.topo-zap { padding: .6rem 1.1rem; font-size: .9rem; }
+.menu-btn {
+  display: none; background: none; border: none; color: var(--branco);
+  font-size: 1.7rem; cursor: pointer; margin-left: auto;
+}
+
+/* Hero */
+.hero { position: relative; color: var(--branco); padding: clamp(4rem, 9vw, 7.5rem) 0 0; overflow: hidden; }
+.hero-bg {
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(105deg, rgba(13,40,20,.94) 0%, rgba(22,64,31,.82) 45%, rgba(22,64,31,.45) 100%),
+    url('../img/fachada-agrodel.jpg') center 36%/cover no-repeat;
+}
+.hero-inner { max-width: 640px; }
+.selo {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: rgba(255,199,44,.16); border: 1px solid rgba(255,199,44,.5);
+  color: var(--amarelo); font-weight: 700; font-size: .82rem; letter-spacing: .06em;
+  text-transform: uppercase; padding: .45rem 1rem; border-radius: 999px; margin-bottom: 1.4rem;
+}
+.hero h1 { font-size: clamp(2.3rem, 5.6vw, 3.7rem); margin-bottom: 1.1rem; }
+.hero h1 em { font-style: normal; color: var(--amarelo); }
+.hero-sub { font-size: 1.1rem; color: #dcead9; max-width: 540px; margin-bottom: 1.8rem; }
+.hero-ctas { display: flex; gap: .9rem; flex-wrap: wrap; }
+
+.stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  background: var(--verde-950); border-radius: var(--raio) var(--raio) 0 0;
+  padding: 1.6rem 2rem; margin-top: clamp(2.5rem, 6vw, 4.5rem);
+}
+.stat { text-align: center; }
+.stat strong {
+  display: block; font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(1.6rem, 3.4vw, 2.3rem); color: var(--amarelo);
+}
+.stat span { color: #b9cdb4; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; }
+
+/* Sobre */
+.sobre { padding: clamp(3.5rem, 8vw, 6rem) 0; background: var(--creme); }
+.sobre-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.sobre-txt p { margin-bottom: 1rem; color: #3a4a36; }
+.verde { color: var(--verde-500); }
+.sobre-pontos { list-style: none; margin-top: 1.3rem; display: grid; gap: .55rem; }
+.sobre-pontos li { display: flex; align-items: center; gap: .6rem; font-weight: 600; }
+.sobre-pontos i { color: var(--verde-500); font-size: 1.25rem; }
+.sobre-foto img { border-radius: var(--raio); box-shadow: var(--sombra); }
+
+/* Produtos */
+.produtos { padding: clamp(3.5rem, 8vw, 6rem) 0; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.card {
+  border: 1px solid #e4e9e0; border-radius: var(--raio); padding: 1.8rem 1.6rem;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--sombra); border-color: var(--verde-vivo); }
+.card > i {
+  font-size: 1.7rem; color: var(--verde-500); background: #e9f4e6;
+  width: 56px; height: 56px; border-radius: 14px;
+  display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+}
+.card h3 { font-size: 1.12rem; margin-bottom: .5rem; }
+.card p { color: var(--cinza); font-size: .95rem; margin-bottom: 1rem; }
+.card a { color: var(--verde-500); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: .35rem; }
+.card a:hover { color: var(--verde-700); }
+
+/* Serviços */
+.servicos { padding: clamp(3.5rem, 8vw, 6rem) 0; background: var(--verde-950); color: var(--branco); }
+.servicos h2 { color: var(--branco); }
+.servicos .secao-sub { color: #b9cdb4; }
+.serv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
+.serv {
+  display: flex; gap: 1rem; background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1); border-radius: var(--raio); padding: 1.4rem;
+}
+.serv i { font-size: 1.6rem; color: var(--verde-vivo); flex-shrink: 0; }
+.serv h3 { font-size: 1.02rem; margin-bottom: .3rem; }
+.serv p { color: #b9cdb4; font-size: .9rem; }
+.cta-faixa {
+  margin-top: 2.4rem; background: var(--verde-700); border-radius: var(--raio);
+  padding: 1.8rem 2rem; display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; flex-wrap: wrap;
+}
+.cta-faixa p { font-size: 1.08rem; font-weight: 600; max-width: 560px; }
+
+/* Novidades */
+.novidades { padding: clamp(3.5rem, 8vw, 6rem) 0; background: var(--creme); }
+.galeria { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 2rem; }
+.galeria img {
+  border-radius: 12px; box-shadow: var(--sombra); aspect-ratio: 4 / 5;
+  object-fit: cover; transition: transform .18s ease;
+}
+.galeria img:hover { transform: scale(1.03); }
+
+/* Contato */
+.contato { padding: clamp(3.5rem, 8vw, 6rem) 0; }
+.contato-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(1.6rem, 4vw, 3rem); align-items: start; }
+.contato-info { display: grid; gap: 1.3rem; }
+.info { display: flex; gap: 1rem; }
+.info i {
+  font-size: 1.4rem; color: var(--verde-500); background: #e9f4e6;
+  width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.info h3 { font-size: 1rem; margin-bottom: .15rem; }
+.info p { color: var(--cinza); font-size: .95rem; }
+.info a { color: var(--verde-500); font-weight: 600; text-decoration: none; }
+.info a:hover { text-decoration: underline; }
+.mapa iframe {
+  width: 100%; height: 100%; min-height: 420px; border: 0;
+  border-radius: var(--raio); box-shadow: var(--sombra);
+}
+
+/* Rodapé */
+.rodape { background: var(--verde-950); color: #cfdccb; padding: 3rem 0 0; }
+.rodape-grid { display: grid; grid-template-columns: 1.4fr 1fr 1.2fr; gap: 2rem; padding-bottom: 2rem; }
+.rodape-logo { height: 40px; width: auto; margin-bottom: .9rem; }
+.rodape h4 { color: var(--branco); margin-bottom: .8rem; font-size: 1rem; }
+.rodape a { color: #cfdccb; text-decoration: none; display: block; margin-bottom: .4rem; }
+.rodape a:hover { color: var(--amarelo); }
+.rodape p { font-size: .93rem; margin-bottom: .5rem; }
+.rodape-social {
+  display: inline-flex !important; margin: .6rem .6rem 0 0 !important;
+  width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,.08);
+  align-items: center; justify-content: center; font-size: 1.25rem;
+}
+.rodape-social:hover { background: var(--verde-700); color: var(--branco); }
+.rodape-base { border-top: 1px solid rgba(255,255,255,.12); padding: 1.2rem 0; text-align: center; }
+.rodape-base p { font-size: .85rem; color: #93a58e; }
+
+/* WhatsApp flutuante */
+.zap-flutuante {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 60;
+  width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: var(--branco);
+  display: flex; align-items: center; justify-content: center; font-size: 1.9rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25); transition: transform .15s ease;
+}
+.zap-flutuante:hover { transform: scale(1.08); }
+
+/* Animação de entrada (progressiva: sem JS, tudo visível) */
+.js .anim { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+.js .anim.visivel { opacity: 1; transform: none; }
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .cards, .serv-grid { grid-template-columns: repeat(2, 1fr); }
+  .galeria { grid-template-columns: repeat(3, 1fr); }
+  .sobre-grid, .contato-grid { grid-template-columns: 1fr; }
+  .mapa iframe { min-height: 320px; }
+}
+@media (max-width: 640px) {
+  .menu {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--verde-950); flex-direction: column; gap: 0; padding: .5rem 0 1rem;
+  }
+  .menu.aberto { display: flex; }
+  .menu a { padding: .7rem 1.5rem; border-bottom: none; }
+  .menu-btn { display: block; }
+  .topo-zap { display: none; }
+  .cards, .serv-grid { grid-template-columns: 1fr; }
+  .galeria { grid-template-columns: repeat(2, 1fr); }
+  .stats { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.4rem; }
+  .cta-faixa { justify-content: center; text-align: center; }
+}
