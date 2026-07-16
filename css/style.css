@@ -324,7 +324,7 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
   .menu a { padding: .7rem 1.5rem; border-bottom: none; }
   .menu-btn { display: block; }
   .topo-zap { display: none; }
-  .cards, .serv-grid, .passos { grid-template-columns: 1fr; }
+  .cards, .cards.quatro, .serv-grid, .passos { grid-template-columns: 1fr; }
   .galeria { grid-template-columns: repeat(2, 1fr); }
   .stats { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.4rem; }
   .cta-faixa { justify-content: center; text-align: center; }
