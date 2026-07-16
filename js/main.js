@@ -32,6 +32,27 @@ if (orcForm) {
   });
 }
 
+// Chegou na loja: lista de entradas recentes gerada pelo vigia de NF-e
+fetch('chegou.json')
+  .then(function (r) { return r.ok ? r.json() : null; })
+  .then(function (d) {
+    if (!d || !d.itens || !d.itens.length) return;
+    var ul = document.getElementById('chegouLista');
+    d.itens.forEach(function (it) {
+      var li = document.createElement('li');
+      li.textContent = it.nome;
+      if (it.data) {
+        var p = it.data.split('-');
+        var s = document.createElement('span');
+        s.textContent = p[2] + '/' + p[1];
+        li.appendChild(s);
+      }
+      ul.appendChild(li);
+    });
+    document.getElementById('chegou').hidden = false;
+  })
+  .catch(function () {});
+
 // Animação de entrada nas seções
 if ('IntersectionObserver' in window) {
   var alvos = document.querySelectorAll('.card, .serv, .info, .sobre-txt, .sobre-foto, .galeria img, .stat');

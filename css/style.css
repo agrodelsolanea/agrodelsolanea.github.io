@@ -152,6 +152,23 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 
 /* Novidades */
 .novidades { padding: clamp(3.5rem, 8vw, 6rem) 0; background: var(--creme); }
+.chegou { max-width: 900px; margin: 0 auto 2.6rem; text-align: center; }
+.chegou h3 {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: 1.15rem; margin-bottom: 1rem;
+}
+.chegou h3 i { color: var(--verde-500); font-size: 1.35rem; }
+.chegou-lista {
+  list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
+  gap: .55rem; margin-bottom: .9rem;
+}
+.chegou-lista li {
+  background: var(--branco); border: 1px solid #e4e9e0; border-radius: 999px;
+  padding: .42rem 1rem; font-size: .88rem; font-weight: 600;
+  display: inline-flex; align-items: center; gap: .5rem;
+}
+.chegou-lista li span { color: var(--verde-500); font-size: .78rem; font-weight: 700; }
+.chegou-nota { color: var(--cinza); font-size: .85rem; }
 .galeria { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 2rem; }
 .galeria img {
   border-radius: 12px; box-shadow: var(--sombra); aspect-ratio: 4 / 5;
