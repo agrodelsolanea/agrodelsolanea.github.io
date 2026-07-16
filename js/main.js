@@ -13,6 +13,25 @@ menu.addEventListener('click', function (e) {
   if (e.target.tagName === 'A') menu.classList.remove('aberto');
 });
 
+// Orçamento rápido: monta a mensagem estruturada e abre o WhatsApp
+var orcForm = document.getElementById('orcForm');
+if (orcForm) {
+  orcForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    function v(id) {
+      var el = document.getElementById(id);
+      return el ? el.value.trim() : '';
+    }
+    var linhas = ['Olá! Quero um orçamento. Vi no site:'];
+    if (v('orcCategoria')) linhas.push('Categoria: ' + v('orcCategoria'));
+    if (v('orcProduto')) linhas.push('Produto: ' + v('orcProduto'));
+    if (v('orcQtd')) linhas.push('Quantidade: ' + v('orcQtd'));
+    if (v('orcNome')) linhas.push('Nome: ' + v('orcNome'));
+    if (v('orcCidade')) linhas.push('Cidade: ' + v('orcCidade'));
+    window.open('https://wa.me/5583991708536?text=' + encodeURIComponent(linhas.join('\n')), '_blank', 'noopener');
+  });
+}
+
 // Animação de entrada nas seções
 if ('IntersectionObserver' in window) {
   var alvos = document.querySelectorAll('.card, .serv, .info, .sobre-txt, .sobre-foto, .galeria img, .stat');
