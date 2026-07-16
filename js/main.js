@@ -2,6 +2,19 @@
 // animação de entrada e contadores.
 document.documentElement.classList.add('js');
 
+// F5 volta pro topo: só em RELOAD (navegação por âncora continua normal)
+(function () {
+  var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+  var recarregou = nav ? nav.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+  if (!recarregou) return;
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  function topo() { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }
+  topo();
+  window.addEventListener('pageshow', topo);
+  window.addEventListener('load', function () { setTimeout(topo, 0); });
+})();
+
 // Menu mobile
 var btn = document.getElementById('menuBtn');
 var menu = document.getElementById('menu');
