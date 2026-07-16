@@ -338,21 +338,59 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
     linear-gradient(105deg, rgba(13,40,20,.93) 0%, rgba(22,64,31,.78) 45%, rgba(22,64,31,.45) 100%),
     url('../img/forrageiras/banner-caatinga.jpg') center 70%/cover no-repeat;
 }
-.forr-grid { align-items: stretch; }
-.forr-card { display: flex; flex-direction: column; padding: 1.4rem 1.4rem 1.6rem; }
-.forr-foto {
+.vitrine-grid { align-items: stretch; }
+.vitrine-card { display: flex; flex-direction: column; padding: 1.4rem 1.4rem 1.6rem; }
+.vitrine-foto {
   background: var(--branco); border: 1px solid #eef1ec; border-radius: 12px;
   height: 210px; display: flex; align-items: center; justify-content: center;
   margin-bottom: 1rem; overflow: hidden;
 }
-.forr-foto img { max-height: 100%; max-width: 100%; object-fit: contain; }
-.forr-card h3 { font-size: 1.15rem; margin-bottom: .15rem; }
-.forr-tag { color: var(--verde-500); font-weight: 700; font-size: .85rem; margin-bottom: .7rem; }
-.forr-specs { list-style: none; display: grid; gap: .4rem; margin-bottom: 1.1rem; }
-.forr-specs li { display: flex; gap: .5rem; font-size: .92rem; color: #3a4a36; align-items: flex-start; }
-.forr-specs i { color: var(--verde-500); flex-shrink: 0; margin-top: .1rem; }
-.forr-card .btn { margin-top: auto; align-self: flex-start; font-size: .92rem; padding: .7rem 1.3rem; }
-.forr-nota { color: var(--cinza); font-size: .75rem; margin-top: .6rem; }
+.vitrine-foto img { max-height: 100%; max-width: 100%; object-fit: contain; }
+.vitrine-card h3 { font-size: 1.15rem; margin-bottom: .15rem; }
+.vitrine-tag { color: var(--verde-500); font-weight: 700; font-size: .85rem; margin-bottom: .7rem; }
+.vitrine-specs { list-style: none; display: grid; gap: .4rem; margin-bottom: 1.1rem; }
+.vitrine-specs li { display: flex; gap: .5rem; font-size: .92rem; color: #3a4a36; align-items: flex-start; }
+.vitrine-specs i { color: var(--verde-500); flex-shrink: 0; margin-top: .1rem; }
+.vitrine-card .btn { margin-top: auto; align-self: flex-start; font-size: .92rem; padding: .7rem 1.3rem; }
+.vitrine-nota { color: var(--cinza); font-size: .75rem; margin-top: .6rem; }
+
+/* Bombas */
+.hero-bombas {
+  background:
+    linear-gradient(105deg, rgba(13,40,20,.93) 0%, rgba(22,64,31,.78) 45%, rgba(22,64,31,.45) 100%),
+    url('../img/forrageiras/banner-caatinga.jpg') center 70%/cover no-repeat;
+}
+/* Selos dos cards de produto (licença / vitrine com foto) */
+.card-selo {
+  display: inline-flex; align-items: center; gap: .35rem;
+  background: #eef5ec; color: var(--verde-700);
+  border: 1px solid #dce8d8; border-radius: 999px;
+  padding: .25rem .7rem; font-size: .72rem; font-weight: 700;
+  line-height: 1.35; margin-bottom: .7rem;
+}
+.card-selo i { font-size: .9rem; flex-shrink: 0; }
+.card-selo.selo-foto { background: #fff6dc; color: #8a6100; border-color: #f2e2ae; }
+.card.destaque { border-color: #d8e6d3; box-shadow: var(--sombra); }
+.card-vitrine {
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-weight: 700; color: var(--verde-500); margin-bottom: .5rem;
+}
+.card-vitrine:hover { color: var(--verde-700); }
+
+.produtos.alt { background: var(--creme); padding-top: 0; }
+.tripe { background: var(--verde-950); color: var(--branco); padding: 4.5rem 0; }
+.tripe h2 { color: var(--branco); }
+.tripe .secao-sub { color: #b9cdb4; }
+.tripe h2 em { font-style: normal; color: var(--amarelo); }
+.tripe-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-top: 2.4rem; }
+.tripe-item {
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--raio); padding: 1.8rem 1.5rem;
+}
+.tripe-item i { font-size: 2rem; color: var(--amarelo); display: block; margin-bottom: .8rem; }
+.tripe-item h3 { font-size: 1.08rem; color: var(--branco); margin-bottom: .5rem; }
+.tripe-item p { color: #dcead9; font-size: .95rem; }
+.tripe-item .serv-link { margin-top: .8rem; display: inline-flex; }
 
 /* Animação de entrada (progressiva: sem JS, tudo visível) */
 .js .anim { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
@@ -360,7 +398,7 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 
 /* Responsivo */
 @media (max-width: 900px) {
-  .cards, .serv-grid, .passos { grid-template-columns: repeat(2, 1fr); }
+  .cards, .serv-grid, .passos, .tripe-grid { grid-template-columns: repeat(2, 1fr); }
   .menu {
     display: none; position: absolute; top: 100%; left: 0; right: 0;
     background: var(--verde-950); flex-direction: column; gap: 0; padding: .5rem 0 1rem;
@@ -382,7 +420,7 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 }
 @media (max-width: 640px) {
   .orc-form { grid-template-columns: 1fr; }
-  .cards, .cards.quatro, .serv-grid, .passos { grid-template-columns: 1fr; }
+  .cards, .cards.quatro, .serv-grid, .passos, .tripe-grid { grid-template-columns: 1fr; }
   .rodape-grid { grid-template-columns: 1fr; }
   .galeria { grid-template-columns: repeat(2, 1fr); }
   .stats { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.4rem; }
