@@ -150,7 +150,7 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 }
 .serv-link:hover { color: var(--amarelo); }
 .cta-faixa {
-  margin-top: 2.4rem; background: var(--verde-700); border-radius: var(--raio);
+  margin-top: 2.4rem; background: var(--verde-700); color: var(--branco); border-radius: var(--raio);
   padding: 1.8rem 2rem; display: flex; align-items: center; justify-content: space-between;
   gap: 1.5rem; flex-wrap: wrap;
 }
@@ -303,6 +303,25 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 .aviso p { color: #dcead9; font-size: .95rem; }
 .aviso strong { color: var(--branco); }
 
+/* Equipe */
+.equipe-grid.cards.quatro { max-width: 900px; }
+.equipe-card { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.equipe-card h3 { font-size: 1.2rem; }
+.equipe-funcao { color: var(--cinza); font-size: .92rem; margin-bottom: 1.1rem; }
+.equipe-card .btn { font-size: .92rem; padding: .7rem 1.3rem; margin-top: auto; }
+.equipe-foto {
+  width: 128px; height: 128px; border-radius: 50%; overflow: hidden;
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-bottom: 1rem; border: 3px solid var(--amarelo);
+  background: #e9f4e6; box-shadow: var(--sombra);
+}
+.equipe-foto img { width: 100%; height: 100%; object-fit: cover; }
+.equipe-foto.sem-foto::after {
+  content: attr(data-inicial);
+  font-family: 'Archivo Black', sans-serif; font-size: 3rem; color: var(--verde-500);
+}
+.equipe-faixa { margin-top: 2.4rem; }
+
 /* Animação de entrada (progressiva: sem JS, tudo visível) */
 .js .anim { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
 .js .anim.visivel { opacity: 1; transform: none; }
@@ -310,12 +329,6 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 /* Responsivo */
 @media (max-width: 900px) {
   .cards, .serv-grid, .passos { grid-template-columns: repeat(2, 1fr); }
-  .galeria { grid-template-columns: repeat(3, 1fr); }
-  .sobre-grid, .contato-grid { grid-template-columns: 1fr; }
-  .mapa iframe { min-height: 320px; }
-}
-@media (max-width: 640px) {
-  .orc-form { grid-template-columns: 1fr; }
   .menu {
     display: none; position: absolute; top: 100%; left: 0; right: 0;
     background: var(--verde-950); flex-direction: column; gap: 0; padding: .5rem 0 1rem;
@@ -324,6 +337,12 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
   .menu a { padding: .7rem 1.5rem; border-bottom: none; }
   .menu-btn { display: block; }
   .topo-zap { display: none; }
+  .galeria { grid-template-columns: repeat(3, 1fr); }
+  .sobre-grid, .contato-grid { grid-template-columns: 1fr; }
+  .mapa iframe { min-height: 320px; }
+}
+@media (max-width: 640px) {
+  .orc-form { grid-template-columns: 1fr; }
   .cards, .cards.quatro, .serv-grid, .passos { grid-template-columns: 1fr; }
   .rodape-grid { grid-template-columns: 1fr; }
   .galeria { grid-template-columns: repeat(2, 1fr); }
