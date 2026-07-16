@@ -60,14 +60,15 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 }
 .topo-inner { display: flex; align-items: center; gap: 1.5rem; padding: .65rem 0; }
 .marca-logo { height: 44px; width: auto; }
-.menu { display: flex; gap: 1.4rem; margin-left: auto; }
+.menu { display: flex; gap: 1.4rem; margin-left: auto; align-items: center; }
 .menu a {
   color: #e8f3e6; text-decoration: none; font-weight: 600; font-size: .95rem;
   padding: .3rem 0; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s;
 }
 .menu a:hover { color: var(--amarelo); border-color: var(--amarelo); }
 .menu-sub { position: relative; }
-.menu-sub > a i { vertical-align: -.15em; }
+.menu-sub > a { display: inline-flex; align-items: center; gap: .1rem; }
+.menu-sub > a i { font-size: 1.05em; line-height: 1; }
 .submenu {
   display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   background: var(--verde-950); border: 1px solid rgba(255,255,255,.14); border-radius: 12px;
