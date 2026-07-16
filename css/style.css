@@ -252,7 +252,7 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 .rodape h4 { color: var(--branco); margin-bottom: .8rem; font-size: 1rem; }
 .rodape a { color: #cfdccb; text-decoration: none; display: block; margin-bottom: .4rem; }
 .rodape a:hover { color: var(--amarelo); }
-.rodape p { font-size: .93rem; margin-bottom: .5rem; }
+.rodape p { font-size: .93rem; margin-bottom: .5rem; overflow-wrap: break-word; }
 .rodape-social {
   display: inline-flex !important; margin: .6rem .6rem 0 0 !important;
   width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,.08);
@@ -325,6 +325,7 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
   .menu-btn { display: block; }
   .topo-zap { display: none; }
   .cards, .cards.quatro, .serv-grid, .passos { grid-template-columns: 1fr; }
+  .rodape-grid { grid-template-columns: 1fr; }
   .galeria { grid-template-columns: repeat(2, 1fr); }
   .stats { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.4rem; }
   .cta-faixa { justify-content: center; text-align: center; }
