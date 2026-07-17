@@ -360,6 +360,13 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
     linear-gradient(105deg, rgba(13,40,20,.93) 0%, rgba(22,64,31,.78) 45%, rgba(22,64,31,.45) 100%),
     url('../img/forrageiras/banner-caatinga.jpg') center 70%/cover no-repeat;
 }
+
+/* Saúde animal e pragas */
+.hero-saude {
+  background:
+    linear-gradient(105deg, rgba(13,40,20,.93) 0%, rgba(22,64,31,.78) 45%, rgba(22,64,31,.45) 100%),
+    url('../img/forrageiras/banner-caatinga.jpg') center 70%/cover no-repeat;
+}
 /* Selos dos cards de produto (licença / vitrine com foto) */
 .card-selo {
   display: inline-flex; align-items: center; gap: .35rem;
