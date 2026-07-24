@@ -404,8 +404,8 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 .js .anim.visivel { opacity: 1; transform: none; }
 
 /* Responsivo */
-@media (max-width: 900px) {
-  .cards, .serv-grid, .passos, .tripe-grid { grid-template-columns: repeat(2, 1fr); }
+/* O cabecalho tem itens demais para caber abaixo de 1100px: vira menu sanfona antes. */
+@media (max-width: 1100px) {
   .menu {
     display: none; position: absolute; top: 100%; left: 0; right: 0;
     background: var(--verde-950); flex-direction: column; gap: 0; padding: .5rem 0 1rem;
@@ -421,6 +421,9 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
     border: 0; box-shadow: none; padding: 0; min-width: 0;
   }
   .submenu a { padding: .55rem 1.5rem .55rem 2.6rem; font-size: .9rem; color: #b9cdb4; }
+}
+@media (max-width: 900px) {
+  .cards, .serv-grid, .passos, .tripe-grid { grid-template-columns: repeat(2, 1fr); }
   .galeria { grid-template-columns: repeat(3, 1fr); }
   .sobre-grid, .contato-grid { grid-template-columns: 1fr; }
   .mapa iframe { min-height: 320px; }
