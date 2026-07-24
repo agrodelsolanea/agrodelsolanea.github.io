@@ -1,0 +1,13 @@
+{
+ "gerado_em": "2026-07-24T15:58:37-03:00",
+ "dw_ate": "2026-07-23",
+ "disponivel": {
+  "s900": true,
+  "s800": true,
+  "s5g": true,
+  "ecco": true,
+  "cm60": true,
+  "ferrari": true,
+  "toyama": true
+ }
+}
