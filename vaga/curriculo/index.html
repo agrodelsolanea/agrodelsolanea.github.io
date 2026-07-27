@@ -58,6 +58,9 @@
     .cv-aceite label { font-size: .9rem; color: var(--cinza); }
     .cv-enviar { width: 100%; justify-content: center; border: 0; cursor: pointer; font: inherit; }
     .cv-enviar[disabled] { opacity: .55; cursor: not-allowed; }
+    /* Botao desabilitado sem explicacao trava a pessoa: ela toca, nada acontece e
+       nao tem como adivinhar o que falta. No celular nem responde ao toque. */
+    .cv-falta { margin: .7rem 0 0; font-size: .93rem; color: var(--cinza); text-align: center; min-height: 1.2em; }
     .cv-recado { margin-top: 1rem; padding: .9rem 1.1rem; border-radius: 12px; font-size: .93rem; display: none; }
     .cv-recado.erro { display: block; background: #fdecea; border: 1px solid #f0b4ae; color: #8c1d14; }
     .cv-recado.aviso { display: block; background: #fff8e1; border: 1px solid var(--amarelo); color: #6b4e00; }
@@ -139,6 +142,7 @@
         <button type="submit" class="btn btn-amarelo grande cv-enviar" id="enviar" disabled>
           <i class="ri-send-plane-fill"></i> <span id="enviarTexto">Enviar currículo</span>
         </button>
+        <p class="cv-falta" id="falta" aria-live="polite"></p>
         <div class="cv-recado" id="recado" role="alert"></div>
       </form>
 
@@ -150,9 +154,7 @@
 
     </div>
     <p class="cv-socorro">
-      Deu problema para enviar por aqui? Manda para
-      <a href="mailto:gilenoagrodel@gmail.com?subject=Curriculo%20vaga%20vendedor">gilenoagrodel@gmail.com</a>
-      com seu nome no assunto.
+      Deu problema para enviar por aqui? Passe na loja, em Solânea, que a gente resolve com você na hora.
     </p>
   </div>
 </section>
@@ -204,12 +206,24 @@
   }
 
   function revisar() {
-    var ok = escolhidos.length > 0 && $('aceite').checked;
+    var falta = [];
     if (!temCadastro) {
-      ok = ok && $('nome').value.trim().length >= 3 &&
-           $('tel').value.replace(/\D/g, '').length >= 10;
+      if ($('nome').value.trim().length < 3) { falta.push('seu nome completo'); }
+      if ($('tel').value.replace(/\D/g, '').length < 10) { falta.push('seu WhatsApp com DDD'); }
     }
-    $('enviar').disabled = !ok;
+    if (escolhidos.length === 0) { falta.push('escolher o arquivo do currículo'); }
+    if (!$('aceite').checked) { falta.push('marcar a autorização'); }
+
+    $('enviar').disabled = falta.length > 0;
+
+    // Diz o que falta em vez de so apagar o botao.
+    var texto = '';
+    if (falta.length === 1) {
+      texto = 'Falta ' + falta[0] + '.';
+    } else if (falta.length > 1) {
+      texto = 'Falta ' + falta.slice(0, -1).join(', ') + ' e ' + falta[falta.length - 1] + '.';
+    }
+    $('falta').textContent = texto;
   }
 
   // Confere a ASSINATURA do arquivo, não a extensão. Mesmo critério do servidor,
@@ -360,7 +374,7 @@
       }
     }).catch(function (err) {
       recado('Não consegui enviar: ' + (err.message || 'sem conexão') +
-             '. Tente de novo, ou mande para gilenoagrodel@gmail.com.', 'erro');
+             '. Tente de novo. Se continuar, passe na loja que a gente resolve.', 'erro');
       $('enviar').disabled = false;
       $('enviarTexto').textContent = 'Enviar currículo';
     });
