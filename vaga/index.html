@@ -44,6 +44,19 @@
     }
     .aviso-inscricao i { color: #a67c00; font-size: 1.3rem; flex-shrink: 0; }
     .aviso-inscricao p { font-size: .95rem; margin: 0; }
+    /* faixa para quem JA se inscreveu antes de existir a pagina de curriculo:
+       fica logo abaixo do hero porque essa pessoa entra no site procurando isso. */
+    .faixa-curriculo { background: var(--amarelo); padding: 1.6rem 0; }
+    .faixa-curriculo-int {
+      display: flex; gap: 1.4rem; align-items: center; justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .faixa-curriculo strong { display: block; font-size: 1.15rem; color: var(--verde-950); }
+    .faixa-curriculo p { margin: .3rem 0 0; color: #4a3d00; font-size: .95rem; max-width: 62ch; }
+    @media (max-width: 720px) {
+      .faixa-curriculo-int { flex-direction: column; align-items: stretch; text-align: left; }
+      .faixa-curriculo-int .btn { justify-content: center; }
+    }
     /* mesma ideia do aviso acima, mas para viver dentro da secao verde escura */
     .aviso-golpe {
       max-width: 760px; margin: 2.6rem auto 0;
@@ -112,6 +125,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#inscricao" class="btn btn-amarelo grande"><i class="ri-edit-box-line"></i> Quero me inscrever</a>
       <a href="#a-vaga" class="btn btn-contorno"><i class="ri-arrow-down-line"></i> Ver a vaga primeiro</a>
     </div>
+  </div>
+</section>
+
+<section class="faixa-curriculo">
+  <div class="container faixa-curriculo-int">
+    <div>
+      <strong>Já se inscreveu? Agora é a hora do currículo.</strong>
+      <p>Quem já preencheu a ficha pode enviar o currículo por aqui, sem precisar se inscrever de novo. Serve PDF ou foto do currículo impresso.</p>
+    </div>
+    <a href="./curriculo/" class="btn btn-verde grande"><i class="ri-upload-2-line"></i> Enviar meu currículo</a>
   </div>
 </section>
 
