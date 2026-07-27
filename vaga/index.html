@@ -44,6 +44,16 @@
     }
     .aviso-inscricao i { color: #a67c00; font-size: 1.3rem; flex-shrink: 0; }
     .aviso-inscricao p { font-size: .95rem; margin: 0; }
+    /* mesma ideia do aviso acima, mas para viver dentro da secao verde escura */
+    .aviso-golpe {
+      max-width: 760px; margin: 2.6rem auto 0;
+      background: rgba(255,255,255,.06); border: 1px solid var(--amarelo); border-radius: var(--raio);
+      padding: 1.1rem 1.3rem; display: flex; gap: .9rem; align-items: flex-start; text-align: left;
+    }
+    .aviso-golpe i { color: var(--amarelo); font-size: 1.3rem; flex-shrink: 0; }
+    .aviso-golpe p { font-size: .95rem; margin: 0; color: #dce8d8; }
+    .aviso-golpe p + p { margin-top: .6rem; }
+    .aviso-golpe strong { color: var(--branco); }
     .lista-vaga { display: grid; gap: .7rem; margin-top: 1rem; }
     .lista-vaga li { list-style: none; display: flex; gap: .7rem; align-items: flex-start; color: var(--cinza); }
     .lista-vaga i { color: var(--verde-500); flex-shrink: 0; margin-top: .2rem; }
@@ -147,12 +157,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="passo">
         <span class="passo-num">2</span>
         <h3>A gente chama pra segunda etapa</h3>
-        <p>Quem tiver o perfil recebe um contato nosso pedindo o currículo. Aí sim, e só aí.</p>
+        <p>Quem tiver o perfil recebe um <strong>SMS</strong> no celular com um link pra enviar o currículo. Aí sim, e só aí. O link é sempre do nosso site, começando com agrodelsolanea.com.br.</p>
       </div>
       <div class="passo">
         <span class="passo-num">3</span>
         <h3>Conversa na loja</h3>
         <p>Uma entrevista aqui na AGRODEL, olho no olho, pra você conhecer a gente e a gente conhecer você.</p>
+      </div>
+    </div>
+
+    <div class="aviso-golpe">
+      <i class="ri-shield-check-line"></i>
+      <div>
+        <p><strong>Cuidado com golpe.</strong> O nosso SMS chega de um número curto, que você não tem salvo, e isso é normal: é assim que a operadora entrega mensagem de empresa. O que você confere é o link, que é sempre do endereço <strong>agrodelsolanea.com.br</strong>. Se for outro endereço, não é a gente.</p>
+        <p>A AGRODEL <strong>nunca</strong> pede dinheiro, PIX, taxa de cadastro, dados do seu banco ou senha, em nenhuma etapa da seleção. Também não recebemos currículo pelo WhatsApp da loja nem pelo direct do Instagram. Na dúvida, não responda a mensagem: confira aqui nesta página ou passe na loja e pergunte.</p>
       </div>
     </div>
   </div>
