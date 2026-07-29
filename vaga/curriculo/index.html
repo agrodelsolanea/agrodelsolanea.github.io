@@ -97,64 +97,22 @@
 <section class="pag-hero">
   <div class="container">
     <span class="rotulo claro">Segunda etapa</span>
-    <h1>Envie seu <em>currículo</em></h1>
-    <p class="pag-hero-sub">Você se inscreveu na vaga de vendedor(a) da AGRODEL. Agora é só anexar seu currículo aqui. Não precisa de login, nem de cadastro, nem de conta em lugar nenhum.</p>
+    <h1>Envio de currículo <em>encerrado</em></h1>
+    <p class="pag-hero-sub">O prazo para enviar currículo para a vaga de vendedor(a) terminou em 29 de julho de 2026. Quem enviou está no processo e vai receber retorno da gente.</p>
   </div>
 </section>
 
 <section class="cv-secao">
   <div class="container">
     <div class="cv-caixa">
-
-      <div class="cv-ola" id="ola">
-        <p>Olá, <strong id="olaNome"></strong>. Já está tudo preenchido, é só anexar o arquivo aqui embaixo.</p>
-      </div>
-
-      <form id="form" novalidate>
-        <div id="camposManuais">
-          <div class="cv-campo">
-            <label for="nome">Seu nome completo</label>
-            <input type="text" id="nome" name="nome" autocomplete="name" maxlength="80" required>
-          </div>
-          <div class="cv-campo">
-            <label for="tel">Seu WhatsApp com DDD</label>
-            <input type="tel" id="tel" name="tel" autocomplete="tel" maxlength="24" placeholder="(83) 99999-9999" required>
-          </div>
-        </div>
-
-        <div class="cv-campo">
-          <label>Seu currículo</label>
-          <div class="cv-solta" id="solta" tabindex="0" role="button" aria-label="Escolher arquivo do currículo">
-            <i class="ri-upload-cloud-2-line"></i>
-            <b>Toque aqui para escolher o arquivo</b>
-            <span>PDF, JPG ou PNG, até 8 MB cada, no máximo 3 arquivos</span>
-            <input type="file" id="arquivo" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" multiple>
-          </div>
-          <p class="cv-dica">Foto do currículo impresso serve. Se estiver tremida ou cortada, tire outra: quem vai ler é gente.</p>
-          <ul class="cv-lista" id="lista"></ul>
-        </div>
-
-        <div class="cv-aceite">
-          <input type="checkbox" id="aceite" required>
-          <label for="aceite">Autorizo a AGRODEL Agropecuária a guardar meu currículo para este processo seletivo e para vagas futuras, pelo prazo de 6 meses.</label>
-        </div>
-
-        <button type="submit" class="btn btn-amarelo grande cv-enviar" id="enviar" disabled>
-          <i class="ri-send-plane-fill"></i> <span id="enviarTexto">Enviar currículo</span>
-        </button>
-        <p class="cv-falta" id="falta" aria-live="polite"></p>
-        <div class="cv-recado" id="recado" role="alert"></div>
-      </form>
-
-      <div class="cv-pronto" id="pronto">
+      <div class="cv-pronto" style="display:block">
         <i class="ri-checkbox-circle-fill"></i>
-        <h3>Currículo recebido!</h3>
-        <p>Chegou certinho aqui na AGRODEL. Se o seu perfil for o que a gente procura, entramos em contato para uma conversa na loja.</p>
+        <h3>Recebimento encerrado</h3>
+        <p>Não estamos mais recebendo currículo para esta vaga. Se você enviou o seu, ele chegou aqui e está sendo analisado, e você vai ter resposta de qualquer jeito.</p>
       </div>
-
     </div>
     <p class="cv-socorro">
-      Deu problema para enviar por aqui? Passe na loja, em Solânea, que a gente resolve com você na hora.
+      A próxima vaga da AGRODEL vai ser anunciada no nosso <a href="https://www.instagram.com/agrodelsolanea/" target="_blank" rel="noopener">Instagram</a>.
     </p>
   </div>
 </section>
@@ -186,200 +144,6 @@
 </footer>
 
 <script src="../../js/main.js" defer></script>
-<script>
-(function () {
-  'use strict';
-  var API = 'https://curriculos.srv1534583.hstgr.cloud';
-  var MAX_ARQ = 8 * 1024 * 1024, MAX_QTD = 3;
-  var ASSINATURAS = { pdf: '25504446', jpg: 'ffd8ff', png: '89504e47' };
 
-  var $ = function (id) { return document.getElementById(id); };
-  var escolhidos = [], token = '', temCadastro = false;
-
-  var m = location.search.match(/[?&]c=([A-Za-z0-9]{4,32})(&|$)/);
-  if (m) { token = m[1]; }
-
-  function recado(texto, tipo) {
-    var el = $('recado');
-    el.textContent = texto || '';
-    el.className = 'cv-recado' + (texto ? ' ' + (tipo || 'erro') : '');
-  }
-
-  function revisar() {
-    var falta = [];
-    if (!temCadastro) {
-      if ($('nome').value.trim().length < 3) { falta.push('seu nome completo'); }
-      if ($('tel').value.replace(/\D/g, '').length < 10) { falta.push('seu WhatsApp com DDD'); }
-    }
-    if (escolhidos.length === 0) { falta.push('escolher o arquivo do currículo'); }
-    if (!$('aceite').checked) { falta.push('marcar a autorização'); }
-
-    $('enviar').disabled = falta.length > 0;
-
-    // Diz o que falta em vez de so apagar o botao.
-    var texto = '';
-    if (falta.length === 1) {
-      texto = 'Falta ' + falta[0] + '.';
-    } else if (falta.length > 1) {
-      texto = 'Falta ' + falta.slice(0, -1).join(', ') + ' e ' + falta[falta.length - 1] + '.';
-    }
-    $('falta').textContent = texto;
-  }
-
-  // Confere a ASSINATURA do arquivo, não a extensão. Mesmo critério do servidor,
-  // só que aqui a pessoa descobre na hora em vez de esperar o envio falhar.
-  function tipoReal(arquivo) {
-    return new Promise(function (resolve) {
-      var fr = new FileReader();
-      fr.onload = function () {
-        var b = new Uint8Array(fr.result), hex = '';
-        for (var i = 0; i < b.length; i++) {
-          hex += (b[i] < 16 ? '0' : '') + b[i].toString(16);
-        }
-        for (var k in ASSINATURAS) {
-          if (hex.indexOf(ASSINATURAS[k]) === 0) { return resolve(k); }
-        }
-        resolve(null);
-      };
-      fr.onerror = function () { resolve(null); };
-      fr.readAsArrayBuffer(arquivo.slice(0, 8));
-    });
-  }
-
-  function desenharLista() {
-    var ul = $('lista');
-    ul.innerHTML = '';
-    escolhidos.forEach(function (arquivo, i) {
-      var li = document.createElement('li');
-      var ic = document.createElement('i');
-      ic.className = 'ri-file-text-line';
-      var nome = document.createElement('span');
-      nome.textContent = arquivo.name + '  (' + Math.round(arquivo.size / 1024) + ' KB)';
-      var bt = document.createElement('button');
-      bt.type = 'button';
-      bt.className = 'cv-tira';
-      bt.setAttribute('aria-label', 'Tirar ' + arquivo.name);
-      bt.textContent = '✕';
-      bt.onclick = function () { escolhidos.splice(i, 1); desenharLista(); revisar(); };
-      li.appendChild(ic); li.appendChild(nome); li.appendChild(bt);
-      ul.appendChild(li);
-    });
-  }
-
-  function receber(lista) {
-    recado('');
-    var fila = Array.prototype.slice.call(lista);
-    (function proximo() {
-      if (!fila.length) { desenharLista(); revisar(); return; }
-      var arquivo = fila.shift();
-      if (escolhidos.length >= MAX_QTD) {
-        recado('Dá para enviar no máximo ' + MAX_QTD + ' arquivos.', 'aviso');
-        return proximo();
-      }
-      if (arquivo.size > MAX_ARQ) {
-        recado('O arquivo "' + arquivo.name + '" tem ' +
-               (arquivo.size / 1048576).toFixed(1) + ' MB e o limite é 8 MB. ' +
-               'Se for foto, tire de novo com qualidade menor.', 'aviso');
-        return proximo();
-      }
-      tipoReal(arquivo).then(function (tipo) {
-        if (!tipo) {
-          recado('"' + arquivo.name + '" não é PDF, JPG nem PNG. Se estiver no Word, ' +
-                 'salve como PDF ou mande uma foto da folha.', 'aviso');
-        } else {
-          escolhidos.push(arquivo);
-        }
-        proximo();
-      });
-    })();
-  }
-
-  var solta = $('solta'), campo = $('arquivo');
-  solta.onclick = function () { campo.click(); };
-  solta.onkeydown = function (e) {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); campo.click(); }
-  };
-  campo.onchange = function () { receber(campo.files); campo.value = ''; };
-  ['dragenter', 'dragover'].forEach(function (ev) {
-    solta.addEventListener(ev, function (e) { e.preventDefault(); solta.classList.add('sobre'); });
-  });
-  ['dragleave', 'drop'].forEach(function (ev) {
-    solta.addEventListener(ev, function (e) { e.preventDefault(); solta.classList.remove('sobre'); });
-  });
-  solta.addEventListener('drop', function (e) {
-    if (e.dataTransfer && e.dataTransfer.files) { receber(e.dataTransfer.files); }
-  });
-  $('aceite').onchange = revisar;
-  $('nome').oninput = revisar;
-  $('tel').oninput = revisar;
-
-  // Link personalizado: busca nome e telefone e esconde os campos.
-  if (token) {
-    fetch(API + '/c/' + encodeURIComponent(token))
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (d) {
-        if (d && d.ok && d.nome) {
-          temCadastro = true;
-          $('olaNome').textContent = d.nome.split(' ')[0];
-          $('ola').style.display = 'block';
-          $('camposManuais').style.display = 'none';
-          $('nome').required = false;
-          $('tel').required = false;
-          revisar();
-        }
-      })
-      .catch(function () { /* link velho ou fora do ar: cai no formulário manual */ });
-  }
-
-  function paraBase64(arquivo) {
-    return new Promise(function (resolve, reject) {
-      var fr = new FileReader();
-      fr.onload = function () { resolve(String(fr.result).split(',')[1]); };
-      fr.onerror = reject;
-      fr.readAsDataURL(arquivo);
-    });
-  }
-
-  $('form').onsubmit = function (e) {
-    e.preventDefault();
-    if ($('enviar').disabled) { return; }
-    $('enviar').disabled = true;
-    $('enviarTexto').textContent = 'Enviando...';
-    recado('');
-
-    Promise.all(escolhidos.map(function (a) {
-      return paraBase64(a).then(function (b64) { return { nome: a.name, b64: b64 }; });
-    })).then(function (arquivos) {
-      return fetch(API + '/u', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          token: token,
-          nome: $('nome').value.trim(),
-          tel: $('tel').value.trim(),
-          consent: $('aceite').checked,
-          arquivos: arquivos
-        })
-      });
-    }).then(function (r) {
-      return r.json().then(function (d) { return { status: r.status, corpo: d }; });
-    }).then(function (res) {
-      if (res.status === 200 && res.corpo.ok) {
-        $('form').style.display = 'none';
-        $('ola').style.display = 'none';
-        $('pronto').style.display = 'block';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        throw new Error(res.corpo.erro || 'não deu certo');
-      }
-    }).catch(function (err) {
-      recado('Não consegui enviar: ' + (err.message || 'sem conexão') +
-             '. Tente de novo. Se continuar, passe na loja que a gente resolve.', 'erro');
-      $('enviar').disabled = false;
-      $('enviarTexto').textContent = 'Enviar currículo';
-    });
-  };
-})();
-</script>
 </body>
 </html>
