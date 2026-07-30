@@ -80,6 +80,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <nav class="menu" id="menu" aria-label="Navegação principal">
       <a href="#inicio">Início</a>
+      <a href="promocoes.html" class="menu-promo">Promoções</a>
       <a href="#sobre">Sobre</a>
       <div class="menu-sub">
         <a href="#produtos">Produtos <i class="ri-arrow-down-s-line"></i></a>
@@ -125,6 +126,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="stat"><strong data-conta="100" data-sufixo="%">100%</strong><span>produtos certificados</span></div>
   </div>
 </section>
+
+<a class="faixa-promo-home" href="promocoes.html" id="faixaPromo">
+  <div class="container faixa-promo-int">
+    <span><strong>Semana do Agricultor:</strong> <span class="fp-txt-ativa">ferramentas e bombas em promoção só até sexta (31/07)</span><span class="fp-txt-encerrada" hidden>veja o que está em promoção esta semana</span></span>
+    <span class="fp-cta">Ver promoções <i class="ri-arrow-right-line"></i></span>
+  </div>
+</a>
+<script>
+(function () {
+  if (new Date() >= new Date('2026-08-01T00:00:00-03:00')) {
+    var a = document.querySelector('.fp-txt-ativa'), b = document.querySelector('.fp-txt-encerrada');
+    if (a) { a.hidden = true; }
+    if (b) { b.hidden = false; }
+  }
+})();
+</script>
 
 <section class="sobre" id="sobre">
   <div class="container sobre-grid">
@@ -356,6 +373,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
       <h4>Links rápidos</h4>
       <a href="#inicio">Início</a>
+      <a href="promocoes.html">Promoções</a>
       <a href="#sobre">Sobre nós</a>
       <a href="#produtos">Produtos</a>
       <a href="forrageiras.html">Forrageiras</a>

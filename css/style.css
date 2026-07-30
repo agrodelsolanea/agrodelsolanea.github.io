@@ -494,3 +494,24 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
   .stats { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.4rem; }
   .cta-faixa { justify-content: center; text-align: center; }
 }
+
+/* Promoções: link destacado no menu + faixa chamativa na home */
+.menu a.menu-promo { color: var(--amarelo); font-weight: 700; }
+.menu a.menu-promo:hover, .menu a.menu-promo.ativo { color: var(--amarelo); border-color: var(--amarelo); }
+.faixa-promo-home {
+  display: block; background: var(--amarelo); color: var(--verde-950);
+  padding: .85rem 0; text-decoration: none;
+}
+.faixa-promo-int {
+  display: flex; align-items: center; justify-content: center; gap: 1rem;
+  flex-wrap: wrap; font-size: 1.02rem;
+}
+.faixa-promo-int .fp-cta {
+  display: inline-flex; align-items: center; gap: .35rem;
+  background: var(--verde-950); color: var(--amarelo); font-weight: 700;
+  padding: .4rem .9rem; border-radius: 999px; white-space: nowrap;
+}
+.faixa-promo-home:hover .fp-cta { background: var(--verde-900, #14381e); }
+@media (max-width: 640px) {
+  .faixa-promo-int { text-align: center; }
+}
