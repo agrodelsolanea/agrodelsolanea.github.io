@@ -142,6 +142,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 })();
 </script>
+<section class="reels" id="videos">
+  <div class="container">
+    <span class="rotulo centro">Vídeos</span>
+    <h2 class="centro">A AGRODEL em movimento</h2>
+    <p class="secao-sub centro">Um gostinho do nosso dia a dia, direto do Instagram. Toque num vídeo pra assistir.</p>
+    <div class="reels-grid">
+      <a class="reel-card" href="https://www.instagram.com/agrodelsolanea/reel/DbN07LlxjeB/" target="_blank" rel="noopener" data-reel="pecas">
+        <img src="img/reels/reel-pecas.jpg" alt="Capa do vídeo: peças e acessórios que você encontra na AGRODEL" loading="lazy">
+        <span class="reel-play"><i class="ri-play-fill"></i></span>
+        <span class="reel-legenda">Peça e acessório que você nem imagina</span>
+      </a>
+      <a class="reel-card" href="https://www.instagram.com/agrodelsolanea/reel/DangCSmxx0z/" target="_blank" rel="noopener" data-reel="loja">
+        <img src="img/reels/reel-loja.jpg" alt="Capa do vídeo: a loja AGRODEL por dentro" loading="lazy">
+        <span class="reel-play"><i class="ri-play-fill"></i></span>
+        <span class="reel-legenda">A AGRODEL por dentro</span>
+      </a>
+      <a class="reel-card" href="https://www.instagram.com/agrodelsolanea/reel/DZ48cogRWFh/" target="_blank" rel="noopener" data-reel="aleatorias">
+        <img src="img/reels/reel-aleatorias.jpg" alt="Capa do vídeo: coisas que você não sabia que tinha na AGRODEL" loading="lazy">
+        <span class="reel-play"><i class="ri-play-fill"></i></span>
+        <span class="reel-legenda">Coisas que você não sabia que tinha aqui</span>
+      </a>
+    </div>
+    <div class="reels-cta">
+      <a href="https://www.instagram.com/agrodelsolanea/reels/" target="_blank" rel="noopener" class="btn btn-insta"><i class="ri-instagram-line"></i> Ver mais vídeos no Instagram</a>
+    </div>
+  </div>
+</section>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('[data-reel]');
+    if (a && window.dataLayer) {
+      window.dataLayer.push({ event: 'reel_insta', reel: a.getAttribute('data-reel') });
+    }
+  });
+})();
+</script>
 
 <section class="sobre" id="sobre">
   <div class="container sobre-grid">
@@ -264,6 +301,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
 
 <section class="orcamento" id="orcamento">
   <div class="container">

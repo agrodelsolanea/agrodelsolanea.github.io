@@ -503,6 +503,34 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 }
 
 /* Promoções: link destacado no menu + faixa chamativa na home */
+/* Reels do Instagram na home: card com capa vertical + play, clique abre o reel no perfil */
+.reels { padding: clamp(3.5rem, 8vw, 6rem) 0; background: var(--creme, #f6f8f4); }
+.reels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; max-width: 860px; margin: 0 auto; }
+.reel-card { position: relative; display: block; border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra); }
+.reel-card img { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; transition: transform .25s ease; }
+.reel-card:hover img { transform: scale(1.04); }
+.reel-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,.55)); }
+.reel-play i {
+  font-size: 2.2rem; color: #fff; background: rgba(0,0,0,.45);
+  border: 2px solid rgba(255,255,255,.85); border-radius: 50%;
+  width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;
+  transition: transform .2s ease;
+}
+.reel-card:hover .reel-play i { transform: scale(1.1); }
+.reel-legenda {
+  position: absolute; left: .9rem; right: .9rem; bottom: .8rem;
+  color: #fff; font-weight: 600; font-size: .88rem; text-align: center;
+  text-shadow: 0 1px 6px rgba(0,0,0,.65);
+}
+.reels-cta { text-align: center; margin-top: 2.2rem; }
+.btn-insta { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af); color: #fff; }
+.btn-insta:hover { filter: brightness(1.08); color: #fff; }
+@media (max-width: 640px) {
+  .reels-grid { gap: .7rem; }
+  .reel-play i { width: 44px; height: 44px; font-size: 1.6rem; }
+  .reel-legenda { display: none; }
+}
+
 /* Destaques do menu: Serviços e Novidades em amarelo; Promoções com selo cheio (destaque máximo) */
 .menu a.menu-destaque { color: var(--amarelo); }
 .menu a.menu-destaque:hover, .menu a.menu-destaque.ativo { border-color: var(--amarelo); }
