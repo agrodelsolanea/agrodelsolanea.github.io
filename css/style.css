@@ -58,9 +58,15 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
   position: sticky; top: 0; z-index: 50;
   background: rgba(16, 46, 24, .92); backdrop-filter: blur(8px);
 }
-.topo-inner { display: flex; align-items: center; gap: 1.5rem; padding: .65rem 0; }
+/* Barra em 2 linhas no desktop: logo com respiro em cima, menu inteiro embaixo */
+.topo-inner { display: flex; align-items: center; gap: 0 1.5rem; flex-wrap: wrap; padding: .6rem 0 0; }
+.marca { flex-shrink: 0; }
 .marca-logo { height: 44px; width: auto; }
-.menu { display: flex; gap: 1.4rem; margin-left: auto; align-items: center; }
+.menu {
+  display: flex; gap: 1.4rem; align-items: center;
+  order: 3; flex-basis: 100%; justify-content: center;
+  margin-top: .55rem; padding: .5rem 0 .7rem; border-top: 1px solid rgba(255,255,255,.09);
+}
 .menu a {
   color: #e8f3e6; text-decoration: none; font-weight: 600; font-size: .95rem;
   padding: .3rem 0; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s;
@@ -76,7 +82,7 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 }
 .menu-sub:hover .submenu, .menu-sub:focus-within .submenu { display: block; }
 .submenu a { display: block; padding: .5rem 1.1rem; border-bottom: none; white-space: nowrap; }
-.topo-zap { padding: .6rem 1.1rem; font-size: .9rem; }
+.topo-zap { padding: .6rem 1.1rem; font-size: .9rem; margin-left: auto; }
 .menu-btn {
   display: none; background: none; border: none; color: var(--branco);
   font-size: 1.7rem; cursor: pointer; margin-left: auto;
@@ -462,9 +468,11 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 /* Responsivo */
 /* O cabecalho tem itens demais para caber abaixo de 1100px: vira menu sanfona antes. */
 @media (max-width: 1100px) {
+  .topo-inner { padding: .65rem 0; }
   .menu {
     display: none; position: absolute; top: 100%; left: 0; right: 0;
     background: var(--verde-950); flex-direction: column; gap: 0; padding: .5rem 0 1rem;
+    margin-top: 0; border-top: 0;
   }
   .menu.aberto { display: flex; }
   .menu a { padding: .7rem 1.5rem; border-bottom: none; }
@@ -496,8 +504,20 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 }
 
 /* Promoções: link destacado no menu + faixa chamativa na home */
-.menu a.menu-promo { color: var(--amarelo); font-weight: 700; }
-.menu a.menu-promo:hover, .menu a.menu-promo.ativo { color: var(--amarelo); border-color: var(--amarelo); }
+/* Destaques do menu: Serviços e Novidades em amarelo; Promoções com selo cheio (destaque máximo) */
+.menu a.menu-destaque { color: var(--amarelo); }
+.menu a.menu-destaque:hover, .menu a.menu-destaque.ativo { border-color: var(--amarelo); }
+.menu a.menu-promo {
+  background: var(--amarelo); color: var(--verde-950); font-weight: 700;
+  padding: .35rem .85rem; border-radius: 999px; border-bottom: 0;
+}
+.menu a.menu-promo:hover, .menu a.menu-promo.ativo {
+  background: #ffd75e; color: var(--verde-950); border-color: transparent;
+}
+@media (max-width: 1100px) {
+  /* no menu sanfona a pílula vira uma faixa cheia */
+  .menu a.menu-promo { border-radius: 0; padding: .7rem 1.5rem; }
+}
 .faixa-promo-home {
   display: block; background: var(--amarelo); color: var(--verde-950);
   padding: .85rem 0; text-decoration: none;
