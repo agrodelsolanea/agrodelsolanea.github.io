@@ -1,77 +1,36 @@
 {
- "gerado_em": "2026-08-09T08:20:05-03:00",
+ "gerado_em": "2026-08-13T10:33:45-03:00",
  "itens": [
   {
-   "nome": "Terramicina L.a. Solucao Inj 020ML Zoetis",
-   "data": "2026-08-08"
+   "nome": "Óculos Proteção SS1 Rj Inc Super Safety",
+   "data": "2026-08-08",
+   "foto": "img/chegou/oculosprotecaoss1rjincsupersafety.jpg"
   },
   {
-   "nome": "Terra Cortril Spray 125ML 74G Zoetis",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Semente Coentro Verdao 500G Isla",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Raticida Rodilon Bloco Extrusad 1KG Envu",
-   "data": "2026-08-08"
+   "nome": "Semente Coentro Verdão 500G Isla",
+   "data": "2026-08-08",
+   "foto": "img/chegou/sementecoentroverdao500gisla.jpg"
   },
   {
    "nome": "Pulverizador 01,5L Bartofil",
-   "data": "2026-08-08"
+   "data": "2026-08-08",
+   "foto": "img/chegou/pulverizador015lbartofil.jpg"
   },
   {
-   "nome": "Porca Faca C/flange HUSQ.143R/236R/241R/343R",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Pencil Pronto P/uso 050ML Calbos",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Oculos Protecao SS1 Rj Inc Super Safety",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Natu Vermifugo Po Sache 20G Vetbras",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Limitador Altura- 16MM FS.160/220/280",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Lampada Led E27 020W 6500K 1600LM Empalux #id",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Ferron B12 050ML Calbos",
-   "data": "2026-08-08"
+   "nome": "Lâmpada Led E27 020W 6500K 1600LM Empalux",
+   "data": "2026-08-08",
+   "foto": "img/chegou/lampadalede27020w6500k1600lmempalux.jpg"
   },
   {
    "nome": "Enxada Forjada 2,5LL Goivada Tramontina",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Calminex 100G Msd",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Calminex 030G Msd",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Cabecote Carretel de Fio T45X M12 143RII 345FR",
-   "data": "2026-08-08"
+   "data": "2026-08-08",
+   "foto": "img/chegou/enxadaforjada25llgoivadatramontina.jpg"
   },
   {
    "nome": "Bota Pega Forte C Curto S/f Pta/aml",
-   "data": "2026-08-08"
-  },
-  {
-   "nome": "Bio Aves Antibiotico 50G Pinus",
-   "data": "2026-08-08"
+   "data": "2026-08-08",
+   "foto": "img/chegou/botapegaforteccurtosfptaaml.jpg"
   }
- ]
+ ],
+ "outros": 45
 }

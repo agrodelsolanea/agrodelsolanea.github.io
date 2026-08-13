@@ -51,15 +51,33 @@ fetch('chegou.json')
   .then(function (d) {
     if (!d || !d.itens || !d.itens.length) return;
     var ul = document.getElementById('chegouLista');
+    var ZAP = 'https://wa.me/5583991708536?text=';
     d.itens.forEach(function (it) {
       var li = document.createElement('li');
-      li.textContent = it.nome;
+      var a = document.createElement('a');
+      a.href = ZAP + encodeURIComponent(
+        'Olá! Vi no site que chegou na loja: ' + it.nome + '. Tem disponível? Qual o preço?');
+      a.target = '_blank';
+      a.rel = 'noopener';
+      if (it.foto) {
+        var img = document.createElement('img');
+        img.src = it.foto;
+        img.alt = it.nome;
+        img.loading = 'lazy';
+        // se a foto sumir do repo, o card continua de pé só com o nome
+        img.onerror = function () { img.remove(); };
+        a.appendChild(img);
+      }
+      var nome = document.createElement('strong');
+      nome.textContent = it.nome;
+      a.appendChild(nome);
       if (it.data) {
         var p = it.data.split('-');
         var s = document.createElement('span');
-        s.textContent = p[2] + '/' + p[1];
-        li.appendChild(s);
+        s.textContent = 'chegou ' + p[2] + '/' + p[1];
+        a.appendChild(s);
       }
+      li.appendChild(a);
       ul.appendChild(li);
     });
     document.getElementById('chegou').hidden = false;
