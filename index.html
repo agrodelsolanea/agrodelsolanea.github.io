@@ -128,16 +128,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <a class="faixa-promo-home" href="promocoes.html" id="faixaPromo">
   <div class="container faixa-promo-int">
-    <span><strong>Semana do Agricultor:</strong> <span class="fp-txt-ativa">ferramentas e bombas em promoção só até sábado (01/08)</span><span class="fp-txt-encerrada" hidden>veja o que está em promoção esta semana</span></span>
+    <span><span class="fp-txt-ativa" hidden><strong>Semana do Agricultor:</strong> ferramentas e bombas em promoção só até sábado (01/08)</span><span class="fp-txt-neutra"><strong>Promoções:</strong> veja o que está em oferta na loja</span></span>
     <span class="fp-cta">Ver promoções <i class="ri-arrow-right-line"></i></span>
   </div>
 </a>
 <script>
 (function () {
-  if (new Date() >= new Date('2026-08-02T00:00:00-03:00')) {
-    var a = document.querySelector('.fp-txt-ativa'), b = document.querySelector('.fp-txt-encerrada');
-    if (a) { a.hidden = true; }
-    if (b) { b.hidden = false; }
+  // A campanha tem JANELA (inicio e fim). Fora dela a faixa fica no texto neutro, entao ela
+  // nunca mais anuncia campanha vencida nem estreia antes da hora. Pra ligar a proxima,
+  // mexer so nestas 2 datas e no texto do span .fp-txt-ativa.
+  var inicio = new Date('2026-07-30T00:00:00-03:00');
+  var fim = new Date('2026-08-02T00:00:00-03:00');
+  var agora = new Date();
+  if (agora >= inicio && agora < fim) {
+    document.querySelectorAll('.fp-txt-ativa').forEach(function (e) { e.hidden = false; });
+    document.querySelectorAll('.fp-txt-neutra').forEach(function (e) { e.hidden = true; });
   }
 })();
 </script>
