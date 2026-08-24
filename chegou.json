@@ -1,6 +1,16 @@
 {
- "gerado_em": "2026-08-24T16:58:31-03:00",
+ "gerado_em": "2026-08-24T20:11:13-03:00",
  "itens": [
+  {
+   "nome": "Vassourao Gari 40CM Plas.c/cb R400 Odi",
+   "data": "2026-08-20",
+   "foto": "img/chegou/vassouraogari40cmplasccbr400odi.jpg"
+  },
+  {
+   "nome": "Semente H.alfac.cresp.verao Top",
+   "data": "2026-08-20",
+   "foto": "img/chegou/sementehalfaccrespveraotop.jpg"
+  },
   {
    "nome": "Pulverizador Agric 20,0L PC020 Vonder",
    "data": "2026-08-20",
@@ -20,16 +30,6 @@
    "nome": "Semente Coentro Verdão 500G Isla",
    "data": "2026-08-08",
    "foto": "img/chegou/sementecoentroverdao500gisla.jpg"
-  },
-  {
-   "nome": "Pulverizador 01,5L Bartofil",
-   "data": "2026-08-08",
-   "foto": "img/chegou/pulverizador015lbartofil.jpg"
-  },
-  {
-   "nome": "Lâmpada Led E27 020W 6500K 1600LM Empalux",
-   "data": "2026-08-08",
-   "foto": "img/chegou/lampadalede27020w6500k1600lmempalux.jpg"
   }
  ],
  "outros": 148
