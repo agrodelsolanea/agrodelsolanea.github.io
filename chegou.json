@@ -1,6 +1,16 @@
 {
- "gerado_em": "2026-08-13T10:33:45-03:00",
+ "gerado_em": "2026-08-24T16:58:31-03:00",
  "itens": [
+  {
+   "nome": "Pulverizador Agric 20,0L PC020 Vonder",
+   "data": "2026-08-20",
+   "foto": "img/chegou/pulverizadoragric200lpc020vonder.jpg"
+  },
+  {
+   "nome": "Pulverizador 2,0L Comp Previa Vonder",
+   "data": "2026-08-20",
+   "foto": "img/chegou/pulverizador20lcomppreviavonder.jpg"
+  },
   {
    "nome": "Óculos Proteção SS1 Rj Inc Super Safety",
    "data": "2026-08-08",
@@ -20,17 +30,7 @@
    "nome": "Lâmpada Led E27 020W 6500K 1600LM Empalux",
    "data": "2026-08-08",
    "foto": "img/chegou/lampadalede27020w6500k1600lmempalux.jpg"
-  },
-  {
-   "nome": "Enxada Forjada 2,5LL Goivada Tramontina",
-   "data": "2026-08-08",
-   "foto": "img/chegou/enxadaforjada25llgoivadatramontina.jpg"
-  },
-  {
-   "nome": "Bota Pega Forte C Curto S/f Pta/aml",
-   "data": "2026-08-08",
-   "foto": "img/chegou/botapegaforteccurtosfptaaml.jpg"
   }
  ],
- "outros": 45
+ "outros": 148
 }
