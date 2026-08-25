@@ -1,6 +1,26 @@
 {
- "gerado_em": "2026-08-24T20:11:13-03:00",
+ "gerado_em": "2026-08-25T08:20:07-03:00",
  "itens": [
+  {
+   "nome": "Pulverizador 01,5L Bartofil",
+   "data": "2026-08-24",
+   "foto": "img/chegou/pulverizador015lbartofil.jpg"
+  },
+  {
+   "nome": "Foice Rocad S/cb Tramontina",
+   "data": "2026-08-24",
+   "foto": "img/chegou/foicerocadscbtramontina.jpg"
+  },
+  {
+   "nome": "Bota Pega Forte C Med S/f Pta/aml",
+   "data": "2026-08-24",
+   "foto": "img/chegou/botapegafortecmedsfptaaml.jpg"
+  },
+  {
+   "nome": "Bebedouro Chupeta Matriz/term Inox 2 P/suino Bart",
+   "data": "2026-08-24",
+   "foto": "img/chegou/bebedourochupetamatrizterminox2psuinobart.jpg"
+  },
   {
    "nome": "Vassourao Gari 40CM Plas.c/cb R400 Odi",
    "data": "2026-08-20",
@@ -10,27 +30,7 @@
    "nome": "Semente H.alfac.cresp.verao Top",
    "data": "2026-08-20",
    "foto": "img/chegou/sementehalfaccrespveraotop.jpg"
-  },
-  {
-   "nome": "Pulverizador Agric 20,0L PC020 Vonder",
-   "data": "2026-08-20",
-   "foto": "img/chegou/pulverizadoragric200lpc020vonder.jpg"
-  },
-  {
-   "nome": "Pulverizador 2,0L Comp Previa Vonder",
-   "data": "2026-08-20",
-   "foto": "img/chegou/pulverizador20lcomppreviavonder.jpg"
-  },
-  {
-   "nome": "Óculos Proteção SS1 Rj Inc Super Safety",
-   "data": "2026-08-08",
-   "foto": "img/chegou/oculosprotecaoss1rjincsupersafety.jpg"
-  },
-  {
-   "nome": "Semente Coentro Verdão 500G Isla",
-   "data": "2026-08-08",
-   "foto": "img/chegou/sementecoentroverdao500gisla.jpg"
   }
  ],
- "outros": 148
+ "outros": 161
 }
