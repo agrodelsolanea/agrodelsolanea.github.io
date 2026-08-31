@@ -1,6 +1,11 @@
 {
- "gerado_em": "2026-08-25T08:20:07-03:00",
+ "gerado_em": "2026-08-31T12:16:13-03:00",
  "itens": [
+  {
+   "nome": "Substrato Plantio 3L Terral",
+   "data": "2026-08-27",
+   "foto": "img/chegou/substratoplantio3lterral.jpg"
+  },
   {
    "nome": "Pulverizador 01,5L Bartofil",
    "data": "2026-08-24",
@@ -25,12 +30,7 @@
    "nome": "Vassourao Gari 40CM Plas.c/cb R400 Odi",
    "data": "2026-08-20",
    "foto": "img/chegou/vassouraogari40cmplasccbr400odi.jpg"
-  },
-  {
-   "nome": "Semente H.alfac.cresp.verao Top",
-   "data": "2026-08-20",
-   "foto": "img/chegou/sementehalfaccrespveraotop.jpg"
   }
  ],
- "outros": 161
+ "outros": 147
 }
