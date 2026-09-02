@@ -184,7 +184,7 @@ fetch('chegou.json')
   // As faixas já pegam o pior caso (topo da faixa), então a folga não precisa ser maior que isso.
   function comFolga(metros) { return Math.round(metros * 1.10); }
 
-  // Estoque (bombas_estoque.json, gerado do DW todo dia). Usado SÓ pra escolher
+  // Estoque (bombas_estoque.json, atualizado todo dia). Usado SÓ pra escolher
   // entre as bombas que servem tecnicamente: a página nunca escreve "temos" nem
   // "esgotado", porque esse saldo é derivado e pode errar. Sem arquivo, arquivo
   // velho ou DW parado, o seletor decide como se ele não existisse.

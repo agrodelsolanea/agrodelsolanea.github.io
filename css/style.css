@@ -685,7 +685,7 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
 
 /* --------------------------------------------------------------------------
    Faixa da campanha do mes: primeira coisa da home, logo abaixo do menu e
-   ANTES do banner, para aparecer sem rolar (pedido do CEO em 02/09/2026).
+   ANTES do banner, para aparecer sem rolar.
    O fundo e a COR DA CAMPANHA, que e o que a torna reconhecivel de longe: em
    setembro ela e literalmente amarela. Fundo e tinta vem do gerador ja
    conferidos em 4,5:1, porque duas campanhas (Janeiro Branco e Agosto Dourado)
