@@ -528,8 +528,10 @@ var CAMPANHAS_MES = {
     poeTxt('fmTxt', dados.tema);
     var fi = document.getElementById('fmIcone');
     if (fi) fi.className = dados.icone;
+    // atribuicao, nao so "desesconde": assim o estado fica certo mesmo se este
+    // bloco rodar duas vezes na mesma pagina (foi como uma previa minha mentiu)
     var f188 = document.getElementById('fm188');
-    if (f188 && dados.apoio) f188.hidden = false;
+    if (f188) f188.hidden = !dados.apoio;
   }
 
   // (c) home: troca o bloco neutro pelo destaque do mes corrente
@@ -549,5 +551,5 @@ var CAMPANHAS_MES = {
   var ic = document.getElementById('dmIcone');
   if (ic) ic.className = dados.icone;
   var apoio = document.getElementById('dmApoio');
-  if (apoio && dados.apoio) apoio.hidden = false;
+  if (apoio) apoio.hidden = !dados.apoio;
 })();
