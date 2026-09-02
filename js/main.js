@@ -466,18 +466,30 @@ if ('IntersectionObserver' in window) {
 // consciencia.html. Ao mexer num, conferir o outro.
 // ---------------------------------------------------------------------------
 var CAMPANHAS_MES = {
-  1:  { nome: "Janeiro Branco",      cor: "#7a8b99",  corTxt: "#657684",  icone: "ri-mental-health-line",   apoio: true },
-  2:  { nome: "Fevereiro Roxo",      cor: "#6a3d9a",  corTxt: "#6a3d9a",  icone: "ri-empathize-line"        },
-  3:  { nome: "Março Lilás",         cor: "#9c4dcc",  corTxt: "#9c4dcc",  icone: "ri-women-line"            },
-  4:  { nome: "Abril Verde",         cor: "#2e7d32",  corTxt: "#2e7d32",  icone: "ri-shield-check-line"     },
-  5:  { nome: "Maio Amarelo",        cor: "#c9960c",  corTxt: "#956f09",  icone: "ri-roadster-line"         },
-  6:  { nome: "Junho Verde",         cor: "#0f7b4f",  corTxt: "#0f7b4f",  icone: "ri-leaf-line"             },
-  7:  { nome: "Julho Dourado",       cor: "#c8860a",  corTxt: "#9e6a08",  icone: "ri-bear-smile-line"       },
-  8:  { nome: "Agosto Dourado",      cor: "#a97c1a",  corTxt: "#966e17",  icone: "ri-heart-2-line"          },
-  9:  { nome: "Setembro Amarelo",    cor: "#e6a700",  corTxt: "#966d00",  icone: "ri-heart-pulse-line",     apoio: true },
-  10: { nome: "Outubro Rosa",        cor: "#d63384",  corTxt: "#d52f81",  icone: "ri-hand-heart-line"       },
-  11: { nome: "Novembro Azul",       cor: "#1565c0",  corTxt: "#1565c0",  icone: "ri-men-line"              },
-  12: { nome: "Dezembro Vermelho",   cor: "#c62828",  corTxt: "#c62828",  icone: "ri-test-tube-line"        }
+  1:  { nome: "Janeiro Branco",      cor: "#7a8b99",  corTxt: "#657684",  corClara: "#82929f", 
+       faixaFundo: "#7f909d",  faixaTinta: "#152a17",  icone: "ri-mental-health-line",   tema: "Saúde mental e cuidado com a própria cabeça.", apoio: true },
+  2:  { nome: "Fevereiro Roxo",      cor: "#6a3d9a",  corTxt: "#6a3d9a",  corClara: "#a580cd", 
+       faixaFundo: "#6a3d9a",  faixaTinta: "#ffffff",  icone: "ri-empathize-line",       tema: "Lúpus, Alzheimer e fibromialgia." },
+  3:  { nome: "Março Lilás",         cor: "#9c4dcc",  corTxt: "#9c4dcc",  corClara: "#b478d8", 
+       faixaFundo: "#9c4dcc",  faixaTinta: "#ffffff",  icone: "ri-women-line",           tema: "Prevenção do câncer do colo do útero." },
+  4:  { nome: "Abril Verde",         cor: "#2e7d32",  corTxt: "#2e7d32",  corClara: "#3da542", 
+       faixaFundo: "#2e7d32",  faixaTinta: "#ffffff",  icone: "ri-shield-check-line",    tema: "Saúde e segurança no trabalho." },
+  5:  { nome: "Maio Amarelo",        cor: "#c9960c",  corTxt: "#956f09",  corClara: "#c9960c", 
+       faixaFundo: "#c9960c",  faixaTinta: "#152a17",  icone: "ri-roadster-line",        tema: "Segurança no trânsito e redução de acidentes." },
+  6:  { nome: "Junho Verde",         cor: "#0f7b4f",  corTxt: "#0f7b4f",  corClara: "#14a66b", 
+       faixaFundo: "#0f7b4f",  faixaTinta: "#ffffff",  icone: "ri-leaf-line",            tema: "Meio ambiente e educação ambiental." },
+  7:  { nome: "Julho Dourado",       cor: "#c8860a",  corTxt: "#9e6a08",  corClara: "#c8860a", 
+       faixaFundo: "#c8860a",  faixaTinta: "#152a17",  icone: "ri-bear-smile-line",      tema: "Saúde dos animais e prevenção de zoonoses." },
+  8:  { nome: "Agosto Dourado",      cor: "#a97c1a",  corTxt: "#966e17",  corClara: "#b9881d", 
+       faixaFundo: "#b7861c",  faixaTinta: "#152a17",  icone: "ri-heart-2-line",         tema: "Aleitamento materno e apoio a quem amamenta." },
+  9:  { nome: "Setembro Amarelo",    cor: "#e6a700",  corTxt: "#966d00",  corClara: "#e6a700", 
+       faixaFundo: "#e6a700",  faixaTinta: "#152a17",  icone: "ri-heart-pulse-line",     tema: "Valorização da vida e prevenção do suicídio.", apoio: true },
+  10: { nome: "Outubro Rosa",        cor: "#d63384",  corTxt: "#d52f81",  corClara: "#e066a3", 
+       faixaFundo: "#d52f81",  faixaTinta: "#ffffff",  icone: "ri-hand-heart-line",      tema: "Prevenção e diagnóstico precoce do câncer de mama." },
+  11: { nome: "Novembro Azul",       cor: "#1565c0",  corTxt: "#1565c0",  corClara: "#4693eb", 
+       faixaFundo: "#1565c0",  faixaTinta: "#ffffff",  icone: "ri-men-line",             tema: "Saúde do homem e câncer de próstata." },
+  12: { nome: "Dezembro Vermelho",   cor: "#c62828",  corTxt: "#c62828",  corClara: "#e16c6c", 
+       faixaFundo: "#c62828",  faixaTinta: "#ffffff",  icone: "ri-test-tube-line",       tema: "Prevenção do HIV, da aids e de outras infecções sexualmente transmissíveis." }
 };
 
 (function () {
@@ -501,7 +513,26 @@ var CAMPANHAS_MES = {
     }
   }
 
-  // (b) home: troca o bloco neutro pelo destaque do mes corrente
+  function poeTxt(id, txt) {
+    var el = document.getElementById(id);
+    if (el && txt) el.textContent = txt;
+  }
+
+  // (b) home: a faixa do topo, antes do banner. Nao depende dos teasers: usa
+  // nome e tema, que vem do mesmo gerador dos cards, entao nao ha o que divergir.
+  var fx = document.getElementById('faixaMes');
+  if (fx) {
+    fx.style.setProperty('--fm-fundo', dados.faixaFundo || dados.cor);
+    fx.style.setProperty('--fm-tinta', dados.faixaTinta || '#ffffff');
+    poeTxt('fmNome', dados.nome);
+    poeTxt('fmTxt', dados.tema);
+    var fi = document.getElementById('fmIcone');
+    if (fi) fi.className = dados.icone;
+    var f188 = document.getElementById('fm188');
+    if (f188 && dados.apoio) f188.hidden = false;
+  }
+
+  // (c) home: troca o bloco neutro pelo destaque do mes corrente
   var dm = document.getElementById('dmCard');
   if (!dm) return;
   var teaser = dm.querySelector('#dmTeaser');
@@ -509,10 +540,7 @@ var CAMPANHAS_MES = {
   var meu = teaser.querySelector('[data-mes="' + mes + '"]');
   if (!meu) return;                          // mes sem teaser escrito: fica o neutro
 
-  function poe(id, txt) {
-    var el = document.getElementById(id);
-    if (el && txt) el.textContent = txt;
-  }
+  var poe = poeTxt;
   dm.style.setProperty('--cor-mes', dados.cor);
   dm.style.setProperty('--cor-mes-txt', dados.corTxt || dados.cor);
   poe('dmRotulo', 'Campanha deste mês');

@@ -24,6 +24,12 @@ body {
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
+/* O atributo hidden do HTML vale por `[hidden]{display:none}` da folha do
+   navegador, e QUALQUER classe nossa com `display` ganha dele por
+   especificidade. Isso escondia mal a caixa do CVV e o chip do 188, que sao
+   `display:flex`: o JS marcava hidden e eles continuavam na tela. Esta linha
+   devolve o significado do atributo para o site inteiro. */
+[hidden] { display: none !important; }
 
 .container { width: min(1140px, 92%); margin-inline: auto; }
 .centro { text-align: center; }
@@ -675,4 +681,56 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
   .dm-card { grid-template-columns: 1fr; gap: 1.1rem; padding: 1.5rem 1.3rem; }
   .dm-icone { width: 68px; height: 68px; font-size: 1.9rem; border-radius: 18px; }
   .apoio { flex-direction: column; gap: .6rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Faixa da campanha do mes: primeira coisa da home, logo abaixo do menu e
+   ANTES do banner, para aparecer sem rolar (pedido do CEO em 02/09/2026).
+   O fundo e a COR DA CAMPANHA, que e o que a torna reconhecivel de longe: em
+   setembro ela e literalmente amarela. Fundo e tinta vem do gerador ja
+   conferidos em 4,5:1, porque duas campanhas (Janeiro Branco e Agosto Dourado)
+   nao passavam com a cor crua e precisaram clarear. A faixa amarela de
+   promocoes fica depois do banner, a uma tela inteira de distancia, entao as
+   duas nunca aparecem juntas.
+   -------------------------------------------------------------------------- */
+.faixa-mes {
+  --fm-fundo: var(--verde-700);
+  --fm-tinta: var(--branco);
+  display: block; text-decoration: none;
+  background: var(--fm-fundo);
+  color: var(--fm-tinta);
+  padding: .8rem 0;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .12);
+  transition: filter .15s ease;
+}
+.faixa-mes:hover { filter: brightness(1.06); }
+.fm-int {
+  display: flex; align-items: center; justify-content: center;
+  gap: .5rem 1rem; flex-wrap: wrap; text-align: center;
+}
+.fm-nome {
+  display: inline-flex; align-items: center; gap: .45rem;
+  font-family: 'Archivo Black', 'Archivo', sans-serif;
+  font-size: 1.05rem; letter-spacing: .01em;
+}
+.fm-nome i { font-size: 1.25rem; }
+.fm-txt { font-size: .96rem; font-weight: 500; opacity: .92; }
+/* chip invertido: fundo na tinta e texto na cor da faixa, entao o contraste
+   dele e o mesmo da faixa, ja aprovado, sem precisar de terceira cor */
+.fm-188 {
+  display: inline-flex; align-items: center; gap: .35rem;
+  background: var(--fm-tinta); color: var(--fm-fundo);
+  font-weight: 700; font-size: .86rem;
+  padding: .3rem .8rem; border-radius: 999px; white-space: nowrap;
+}
+.fm-cta {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-weight: 700; font-size: .9rem; white-space: nowrap;
+  border-bottom: 2px solid currentColor; padding-bottom: 1px;
+}
+@media (max-width: 640px) {
+  .faixa-mes { padding: .65rem 0; }
+  .fm-int { gap: .4rem .7rem; }
+  .fm-nome { font-size: .98rem; }
+  .fm-txt { font-size: .86rem; }
 }
