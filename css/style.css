@@ -16,6 +16,11 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+/* o cabecalho e fixo (sticky) e carrega a faixa da campanha: ancora que cai
+   embaixo dele fica escondida. --topo-h vem do js (altura real); a reserva
+   vale antes do js medir e sem js. */
+:root { --topo-h: 176px; }
+section[id], .destaque-mes { scroll-margin-top: calc(var(--topo-h) + 12px); }
 body {
   font-family: 'Archivo', system-ui, sans-serif;
   color: var(--ink);
@@ -701,9 +706,10 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
   color: var(--fm-tinta);
   padding: .8rem 0;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .12);
-  transition: filter .15s ease;
 }
-.faixa-mes:hover { filter: brightness(1.06); }
+/* hover sem filter: brightness clareava texto e fundo juntos e derrubava os
+   meses de tinta branca abaixo de 4,5:1 */
+.faixa-mes:hover .fm-cta { border-bottom-width: 3px; }
 .fm-int {
   display: flex; align-items: center; justify-content: center;
   gap: .5rem 1rem; flex-wrap: wrap; text-align: center;
@@ -714,7 +720,9 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
   font-size: 1.05rem; letter-spacing: .01em;
 }
 .fm-nome i { font-size: 1.25rem; }
-.fm-txt { font-size: .96rem; font-weight: 500; opacity: .92; }
+/* sem opacity: ela compoe o texto com o fundo depois do contraste provado no
+   gerador e derrubava tres meses abaixo de 4,5:1 */
+.fm-txt { font-size: .96rem; font-weight: 500; }
 /* chip invertido: fundo na tinta e texto na cor da faixa, entao o contraste
    dele e o mesmo da faixa, ja aprovado, sem precisar de terceira cor */
 .fm-188 {
@@ -729,8 +737,12 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
   border-bottom: 2px solid currentColor; padding-bottom: 1px;
 }
 @media (max-width: 640px) {
-  .faixa-mes { padding: .65rem 0; }
-  .fm-int { gap: .4rem .7rem; }
+  /* dentro do cabecalho fixo a faixa tem que ser baixa no celular: fica so o
+     nome da campanha e o chip do 188; o tema e o "saiba mais" saem */
+  :root { --topo-h: 150px; }
+  .faixa-mes { padding: .55rem 0; }
+  .fm-int { gap: .3rem .7rem; }
   .fm-nome { font-size: .98rem; }
-  .fm-txt { font-size: .86rem; }
+  .fm-txt, .fm-cta { display: none; }
+  .fm-188 { font-size: .8rem; padding: .22rem .65rem; }
 }

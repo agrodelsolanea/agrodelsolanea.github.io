@@ -465,6 +465,29 @@ if ('IntersectionObserver' in window) {
 // Os textos curtos daqui sao TEASER. O texto longo de cada mes vive em
 // consciencia.html. Ao mexer num, conferir o outro.
 // ---------------------------------------------------------------------------
+// Altura real do cabecalho fixo, para as ancoras (#consciencia, #sobre...) nao
+// pararem escondidas embaixo dele. Recalcula no resize; no load, se a pagina
+// abriu ja com #ancora, reposiciona sem animacao com a margem certa.
+(function () {
+  var topo = document.getElementById('topo');
+  if (!topo) return;
+  function mede() { document.documentElement.style.setProperty('--topo-h', topo.offsetHeight + 'px'); }
+  mede();
+  window.addEventListener('resize', mede);
+  window.addEventListener('load', function () {
+    mede();
+    if (location.hash && location.hash.length > 1) {
+      var alvo = document.getElementById(location.hash.slice(1));
+      if (alvo) {
+        var raiz = document.documentElement, antes = raiz.style.scrollBehavior;
+        raiz.style.scrollBehavior = 'auto';
+        alvo.scrollIntoView({ block: 'start' });
+        raiz.style.scrollBehavior = antes;
+      }
+    }
+  });
+})();
+
 var CAMPANHAS_MES = {
   1:  { nome: "Janeiro Branco",      cor: "#7a8b99",  corTxt: "#657684",  corClara: "#82929f", 
        faixaFundo: "#7f909d",  faixaTinta: "#152a17",  icone: "ri-mental-health-line",   tema: "Saúde mental e cuidado com a própria cabeça.", apoio: true },
@@ -532,6 +555,19 @@ var CAMPANHAS_MES = {
     // bloco rodar duas vezes na mesma pagina (foi como uma previa minha mentiu)
     var f188 = document.getElementById('fm188');
     if (f188) f188.hidden = !dados.apoio;
+  }
+
+  // (b2) a faixa leva ao card desta pagina: rola ate ele respeitando a margem do
+  // cabecalho fixo (scroll-margin-top). O href="#consciencia" fica como reserva
+  // para quem estiver sem JS; a suavidade vem do css (html{scroll-behavior}).
+  if (fx) {
+    fx.addEventListener('click', function (e) {
+      var alvo = document.getElementById('consciencia');
+      if (!alvo) return;
+      e.preventDefault();
+      alvo.scrollIntoView({ block: 'start' });
+      if (history.replaceState) history.replaceState(null, '', '#consciencia');
+    });
   }
 
   // (c) home: troca o bloco neutro pelo destaque do mes corrente
