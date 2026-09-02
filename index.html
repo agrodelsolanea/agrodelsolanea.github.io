@@ -95,6 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#servicos" class="menu-destaque">Serviços</a>
       <a href="manutencao.html">Manutenção</a>
       <a href="equipe.html">Equipe</a>
+      <a href="consciencia.html">Consciência</a>
       <a href="#novidades" class="menu-destaque">Novidades</a>
       <a href="#orcamento">Orçamento</a>
       <a href="#contato">Contato</a>
@@ -279,6 +280,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- Destaque do mes: campanha nacional de conscientizacao. O conteudo abaixo e o
+     NEUTRO (verdadeiro o ano inteiro, e o que fica de pe sem JS e o que o robo de
+     busca le). O js/main.js troca rotulo, titulo, texto, cor e icone pelo mes
+     corrente, e mostra a caixa de apoio nos meses que tratam de vida e saude.
+     Nao existe manutencao mensal: quem vira o mes e o new Date(). -->
+<section class="destaque-mes" id="consciencia">
+  <div class="container">
+    <article class="dm-card" id="dmCard">
+      <div class="dm-icone"><i class="ri-calendar-check-line" id="dmIcone"></i></div>
+      <div>
+        <span class="dm-rotulo" id="dmRotulo">Calendário da consciência</span>
+        <h2 id="dmTitulo">A cada mês, uma causa</h2>
+        <p id="dmTexto">O Brasil dedica cada mês do ano a uma campanha de conscientização. A Agrodel abre espaço pra elas aqui no site, porque saúde, segurança e cabeça no lugar também são coisa de quem vive do campo.</p>
+<!-- INI:TEASERS -->
+        <!-- Frases do destaque da home, uma por mes. Ficam ocultas: o JS pega
+             a do mes corrente e joga no #dmTexto. Sem JS, o visitante le o
+             texto neutro acima, que e verdadeiro o ano inteiro. -->
+        <div id="dmTeaser" hidden>
+          <span data-mes="1">Janeiro Branco chama atenção pra saúde mental. No campo, começo de ano é conta, planejamento e espera de chuva tudo junto: pedir ajuda cedo faz diferença.</span>
+          <span data-mes="2">Fevereiro Roxo fala de lúpus, Alzheimer e fibromialgia, doenças que costumam demorar demais pra ser diagnosticadas. O mês também é laranja, pela leucemia.</span>
+          <span data-mes="3">Março Lilás é a prevenção do câncer do colo do útero, um dos poucos que dá pra evitar com exame de rotina no posto e vacina contra o HPV.</span>
+          <span data-mes="4">Abril Verde é saúde e segurança no trabalho, o mês mais nosso de todos: máquina com proteção, defensivo com receituário e equipamento de proteção sempre.</span>
+          <span data-mes="5">Maio Amarelo é sobre trânsito. No campo o risco está no caminho curto de todo dia: estrada de terra, animal solto, moto carregada e trator na pista.</span>
+          <span data-mes="6">Junho Verde é meio ambiente. Aqui isso tem endereço: embalagem vazia de defensivo, depois da tríplice lavagem, volta pra loja e não fica no barreiro nem na queimada.</span>
+          <span data-mes="7">Julho Dourado é a saúde dos animais domésticos e de rua e a prevenção das doenças que passam do bicho pra gente: vacina no prazo, vermífugo em dia, carrapato controlado.</span>
+          <span data-mes="8">Agosto Dourado é sobre amamentação, e menos sobre a mãe do que sobre quem está em volta dela: família, vizinhança e trabalho.</span>
+          <span data-mes="9">Setembro Amarelo é a campanha de valorização da vida e prevenção do suicídio. Falar sobre isso ajuda, e o campo tem motivo de sobra pra falar.</span>
+          <span data-mes="10">Outubro Rosa é a prevenção do câncer de mama. O recado é simples: quanto mais cedo se acha, maior a chance de cura.</span>
+          <span data-mes="11">Novembro Azul é a saúde do homem. Homem do campo só procura médico quando já não dá pra trabalhar, e é isso que o mês veio quebrar.</span>
+          <span data-mes="12">Dezembro Vermelho é prevenção do HIV e das ISTs. O mês também é laranja, pelo câncer de pele, que fala direto com quem passa o dia no sol da lavoura.</span>
+        </div>
+      <!-- FIM:TEASERS -->        <div class="apoio" id="dmApoio" hidden>
+          <i class="ri-phone-line"></i>
+          <div>
+            <h3 id="dmApoioTitulo">Precisa conversar? Ligue 188</h3>
+            <p id="dmApoioTexto">O CVV atende de graça, 24 horas por dia, todos os dias, em todo o Brasil. Também dá pra falar por chat no site do CVV.</p>
+            <p>A Agrodel não é serviço de saúde. Aqui a gente só aponta o caminho certo.</p>
+          </div>
+        </div>
+        <div class="dm-acoes">
+          <a class="btn btn-verde" href="consciencia.html"><i class="ri-calendar-2-line"></i> Ver o calendário do ano</a>
+          <a class="dm-link" href="consciencia.html#ajuda">Onde pedir ajuda <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
 <section class="novidades" id="novidades">
   <div class="container">
     <span class="rotulo centro">Direto da loja</span>
@@ -424,6 +473,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#orcamento">Orçamento rápido</a>
       <a href="#duvidas">Dúvidas frequentes</a>
       <a href="vaga/">Trabalhe conosco</a>
+      <a href="consciencia.html">Calendário da consciência</a>
       <a href="#contato">Contato</a>
     </div>
     <div>

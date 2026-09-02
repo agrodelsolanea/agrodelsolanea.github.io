@@ -452,3 +452,74 @@ if ('IntersectionObserver' in window) {
   }, { threshold: 0.6 });
   contadores.forEach(function (el) { ioNum.observe(el); });
 }
+
+// ---------------------------------------------------------------------------
+// Calendario da consciencia: destaque do mes na home + marcacao em consciencia.html
+//
+// Regra de projeto: o conteudo de verdade e ESTATICO no HTML (consciencia.html
+// traz os 12 meses escritos, e a home traz um texto neutro que e verdadeiro o ano
+// inteiro). Este bloco so faz o DESTAQUE do mes corrente. Sem JS, as duas paginas
+// continuam corretas, so nao destacam. Quem vira o mes e o new Date(): nao ha
+// manutencao mensal nem robo envolvido.
+//
+// Os textos curtos daqui sao TEASER. O texto longo de cada mes vive em
+// consciencia.html. Ao mexer num, conferir o outro.
+// ---------------------------------------------------------------------------
+var CAMPANHAS_MES = {
+  1:  { nome: "Janeiro Branco",      cor: "#7a8b99",  corTxt: "#657684",  icone: "ri-mental-health-line",   apoio: true },
+  2:  { nome: "Fevereiro Roxo",      cor: "#6a3d9a",  corTxt: "#6a3d9a",  icone: "ri-empathize-line"        },
+  3:  { nome: "Março Lilás",         cor: "#9c4dcc",  corTxt: "#9c4dcc",  icone: "ri-women-line"            },
+  4:  { nome: "Abril Verde",         cor: "#2e7d32",  corTxt: "#2e7d32",  icone: "ri-shield-check-line"     },
+  5:  { nome: "Maio Amarelo",        cor: "#c9960c",  corTxt: "#956f09",  icone: "ri-roadster-line"         },
+  6:  { nome: "Junho Verde",         cor: "#0f7b4f",  corTxt: "#0f7b4f",  icone: "ri-leaf-line"             },
+  7:  { nome: "Julho Dourado",       cor: "#c8860a",  corTxt: "#9e6a08",  icone: "ri-bear-smile-line"       },
+  8:  { nome: "Agosto Dourado",      cor: "#a97c1a",  corTxt: "#966e17",  icone: "ri-heart-2-line"          },
+  9:  { nome: "Setembro Amarelo",    cor: "#e6a700",  corTxt: "#966d00",  icone: "ri-heart-pulse-line",     apoio: true },
+  10: { nome: "Outubro Rosa",        cor: "#d63384",  corTxt: "#d52f81",  icone: "ri-hand-heart-line"       },
+  11: { nome: "Novembro Azul",       cor: "#1565c0",  corTxt: "#1565c0",  icone: "ri-men-line"              },
+  12: { nome: "Dezembro Vermelho",   cor: "#c62828",  corTxt: "#c62828",  icone: "ri-test-tube-line"        }
+};
+
+(function () {
+  var mes = new Date().getMonth() + 1;
+  var dados = CAMPANHAS_MES[mes];
+  if (!dados) return;
+
+  // (a) consciencia.html: marca o card do mes e leva ele pro topo da grade
+  var grade = document.getElementById('calGrid');
+  if (grade) {
+    var card = grade.querySelector('[data-mes="' + mes + '"]');
+    if (card && !card.querySelector('.mes-selo')) {
+      card.classList.add('atual');
+      // o selo nasce aqui, e nao nos 12 cards do HTML: sem JS nao ha "mes
+      // corrente" nenhum, entao nao faz sentido 12 selos escondidos no fonte
+      var selo = document.createElement('span');
+      selo.className = 'mes-selo';
+      selo.textContent = 'Estamos aqui';
+      card.insertBefore(selo, card.firstChild);
+      grade.insertBefore(card, grade.firstChild);
+    }
+  }
+
+  // (b) home: troca o bloco neutro pelo destaque do mes corrente
+  var dm = document.getElementById('dmCard');
+  if (!dm) return;
+  var teaser = dm.querySelector('#dmTeaser');
+  if (!teaser) return;                       // sem os teasers no HTML, fica o neutro
+  var meu = teaser.querySelector('[data-mes="' + mes + '"]');
+  if (!meu) return;                          // mes sem teaser escrito: fica o neutro
+
+  function poe(id, txt) {
+    var el = document.getElementById(id);
+    if (el && txt) el.textContent = txt;
+  }
+  dm.style.setProperty('--cor-mes', dados.cor);
+  dm.style.setProperty('--cor-mes-txt', dados.corTxt || dados.cor);
+  poe('dmRotulo', 'Campanha deste mês');
+  poe('dmTitulo', dados.nome);
+  poe('dmTexto', meu.textContent.trim());
+  var ic = document.getElementById('dmIcone');
+  if (ic) ic.className = dados.icone;
+  var apoio = document.getElementById('dmApoio');
+  if (apoio && dados.apoio) apoio.hidden = false;
+})();
