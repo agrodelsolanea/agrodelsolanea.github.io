@@ -1,6 +1,11 @@
 {
- "gerado_em": "2026-08-31T12:16:13-03:00",
+ "gerado_em": "2026-09-04T07:15:26-03:00",
  "itens": [
+  {
+   "nome": "Triturador FORRA2CV Biv Tramont TE25T",
+   "data": "2026-09-02",
+   "foto": "img/chegou/trituradorforra2cvbivtramontte25t.jpg"
+  },
   {
    "nome": "Substrato Plantio 3L Terral",
    "data": "2026-08-27",
@@ -12,6 +17,11 @@
    "foto": "img/chegou/pulverizador015lbartofil.jpg"
   },
   {
+   "nome": "Pazinha Larga C/cb P/horticultura Tramontina",
+   "data": "2026-08-24",
+   "foto": "img/chegou/pazinhalargaccbphorticulturatramontina.jpg"
+  },
+  {
    "nome": "Foice Rocad S/cb Tramontina",
    "data": "2026-08-24",
    "foto": "img/chegou/foicerocadscbtramontina.jpg"
@@ -20,17 +30,7 @@
    "nome": "Bota Pega Forte C Med S/f Pta/aml",
    "data": "2026-08-24",
    "foto": "img/chegou/botapegafortecmedsfptaaml.jpg"
-  },
-  {
-   "nome": "Bebedouro Chupeta Matriz/term Inox 2 P/suino Bart",
-   "data": "2026-08-24",
-   "foto": "img/chegou/bebedourochupetamatrizterminox2psuinobart.jpg"
-  },
-  {
-   "nome": "Vassourao Gari 40CM Plas.c/cb R400 Odi",
-   "data": "2026-08-20",
-   "foto": "img/chegou/vassouraogari40cmplasccbr400odi.jpg"
   }
  ],
- "outros": 147
+ "outros": 140
 }
