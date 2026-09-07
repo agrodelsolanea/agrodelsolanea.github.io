@@ -1,6 +1,16 @@
 {
- "gerado_em": "2026-09-04T07:15:26-03:00",
+ "gerado_em": "2026-09-07T10:46:18-03:00",
  "itens": [
+  {
+   "nome": "Lâmpada Led 50W 6500K Elgin",
+   "data": "2026-09-04",
+   "foto": "img/chegou/lampadaled50w6500kelgin.jpg"
+  },
+  {
+   "nome": "Bomba Anauger Sappo 800 Extreme 220V",
+   "data": "2026-09-04",
+   "foto": "img/chegou/bombaanaugersappo800extreme220v.jpg"
+  },
   {
    "nome": "Triturador FORRA2CV Biv Tramont TE25T",
    "data": "2026-09-02",
@@ -12,25 +22,15 @@
    "foto": "img/chegou/substratoplantio3lterral.jpg"
   },
   {
-   "nome": "Pulverizador 01,5L Bartofil",
-   "data": "2026-08-24",
-   "foto": "img/chegou/pulverizador015lbartofil.jpg"
+   "nome": "Semente H.rucula Cultiv.feltrin",
+   "data": "2026-08-27",
+   "foto": "img/chegou/sementehruculacultivfeltrin.jpg"
   },
   {
-   "nome": "Pazinha Larga C/cb P/horticultura Tramontina",
-   "data": "2026-08-24",
-   "foto": "img/chegou/pazinhalargaccbphorticulturatramontina.jpg"
-  },
-  {
-   "nome": "Foice Rocad S/cb Tramontina",
-   "data": "2026-08-24",
-   "foto": "img/chegou/foicerocadscbtramontina.jpg"
-  },
-  {
-   "nome": "Bota Pega Forte C Med S/f Pta/aml",
-   "data": "2026-08-24",
-   "foto": "img/chegou/botapegafortecmedsfptaaml.jpg"
+   "nome": "Semente H.mamao Formosa Feltrin",
+   "data": "2026-08-27",
+   "foto": "img/chegou/sementehmamaoformosafeltrin.jpg"
   }
  ],
- "outros": 140
+ "outros": 160
 }
