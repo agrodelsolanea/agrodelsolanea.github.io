@@ -1,6 +1,11 @@
 {
- "gerado_em": "2026-09-07T10:46:18-03:00",
+ "gerado_em": "2026-09-14T10:42:06-03:00",
  "itens": [
+  {
+   "nome": "Carretel Automático Bate e Libera Toyama M10 X 125",
+   "data": "2026-09-11",
+   "foto": "img/chegou/carretelautomaticobateeliberatoyamam10x125.jpg"
+  },
   {
    "nome": "Lâmpada Led 50W 6500K Elgin",
    "data": "2026-09-04",
@@ -25,12 +30,7 @@
    "nome": "Semente H.rucula Cultiv.feltrin",
    "data": "2026-08-27",
    "foto": "img/chegou/sementehruculacultivfeltrin.jpg"
-  },
-  {
-   "nome": "Semente H.mamao Formosa Feltrin",
-   "data": "2026-08-27",
-   "foto": "img/chegou/sementehmamaoformosafeltrin.jpg"
   }
  ],
- "outros": 160
+ "outros": 100
 }
