@@ -34,14 +34,15 @@
     "name": "Produtos em promoção na AGRODEL",
     "url": "https://agrodelsolanea.com.br/promocoes.html",
     "itemListElement": [
-      { "@type": "Product", "position": 1, "name": "Politriz SKIL 470 W", "brand": { "@type": "Brand", "name": "SKIL" } },
-      { "@type": "Product", "position": 2, "name": "Politriz SKIL com maleta", "brand": { "@type": "Brand", "name": "SKIL" } },
-      { "@type": "Product", "position": 3, "name": "Serra mármore Bosch GDC 150", "brand": { "@type": "Brand", "name": "Bosch" } },
-      { "@type": "Product", "position": 4, "name": "Moto esmeril Motomil", "brand": { "@type": "Brand", "name": "Motomil" } },
-      { "@type": "Product", "position": 5, "name": "Bomba centrífuga FAMAC", "brand": { "@type": "Brand", "name": "FAMAC" } },
-      { "@type": "Product", "position": 6, "name": "Podador de cerca viva elétrico" },
-      { "@type": "Product", "position": 7, "name": "Soprador e aspirador de folhas TRAPP", "brand": { "@type": "Brand", "name": "TRAPP" } },
-      { "@type": "Product", "position": 8, "name": "Pressurizador FAMAC", "brand": { "@type": "Brand", "name": "FAMAC" } }
+      { "@type": "Product", "position": 1, "name": "Farinha de Ossos Maxgreen 1 kg", "brand": { "@type": "Brand", "name": "Forth Maxgreen" } },
+      { "@type": "Product", "position": 2, "name": "Politriz SKIL 470 W", "brand": { "@type": "Brand", "name": "SKIL" } },
+      { "@type": "Product", "position": 3, "name": "Politriz SKIL com maleta", "brand": { "@type": "Brand", "name": "SKIL" } },
+      { "@type": "Product", "position": 4, "name": "Serra mármore Bosch GDC 150", "brand": { "@type": "Brand", "name": "Bosch" } },
+      { "@type": "Product", "position": 5, "name": "Moto esmeril Motomil", "brand": { "@type": "Brand", "name": "Motomil" } },
+      { "@type": "Product", "position": 6, "name": "Bomba centrífuga FAMAC", "brand": { "@type": "Brand", "name": "FAMAC" } },
+      { "@type": "Product", "position": 7, "name": "Podador de cerca viva elétrico" },
+      { "@type": "Product", "position": 8, "name": "Soprador e aspirador de folhas TRAPP", "brand": { "@type": "Brand", "name": "TRAPP" } },
+      { "@type": "Product", "position": 9, "name": "Pressurizador FAMAC", "brand": { "@type": "Brand", "name": "FAMAC" } }
     ]
   }
   </script>
@@ -73,6 +74,7 @@
       background: #e63b2e; color: #fff; font-weight: 700; font-size: .78rem;
       letter-spacing: .08em; padding: .3rem .7rem; border-radius: 6px;
     }
+    .selo-especial { background: var(--amarelo); color: var(--verde-950); }
     .faixa-validade {
       background: var(--amarelo); color: var(--verde-950);
       text-align: center; font-weight: 700; padding: .85rem 1rem; font-size: 1.02rem;
@@ -145,6 +147,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="centro">O que está em promoção</h2>
     <p class="secao-sub centro">Clique no produto e fale com nosso time de vendas pelo WhatsApp. Chegou primeiro, levou.</p>
     <div class="cards vitrine-grid">
+      <article class="card vitrine-card promo-card" data-fim="2026-12-01">
+        <span class="selo-oferta selo-especial">PREÇO ESPECIAL</span>
+        <figure class="vitrine-foto"><img src="img/promocoes/farinha-de-ossos-maxgreen-1kg.jpg" alt="Farinha de Ossos Maxgreen 1 kg, pacote branco com flores de cerejeira" loading="lazy"></figure>
+        <h3>Farinha de Ossos Maxgreen 1 kg</h3>
+        <p class="vitrine-tag">Fósforo e cálcio pra enraizar e florir</p>
+        <a class="btn btn-zap" href="https://wa.me/5583991708536?text=Ol%C3%A1!%20Vi%20nas%20promo%C3%A7%C3%B5es%20do%20site%3A%20Farinha%20de%20Ossos%20Maxgreen%201%20kg.%20Quero%20saber%20o%20pre%C3%A7o%20e%20as%20condi%C3%A7%C3%B5es." target="_blank" rel="noopener" data-produto="farinha-ossos-maxgreen"><i class="ri-whatsapp-line"></i> Ver preço no WhatsApp</a>
+        <p class="vitrine-nota">Lote com validade até dezembro de 2026. Preço especial enquanto durar o estoque.</p>
+      </article>
       <article class="card vitrine-card promo-card">
         <span class="selo-oferta promo-ativa">OFERTA</span>
         <figure class="vitrine-foto"><img src="img/promocoes/politriz-skil-470w.jpg" alt="Politriz SKIL 470 W preta com disco de apoio amarelo" loading="lazy"></figure>
@@ -259,6 +269,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.querySelectorAll('.promo-ativa').forEach(function (e) { e.hidden = true; });
     document.querySelectorAll('.promo-encerrada').forEach(function (e) { e.hidden = false; });
   }
+  // Oferta de produto com prazo (ex.: lote com validade proxima): o card sai do ar sozinho a partir de data-fim.
+  document.querySelectorAll('[data-fim]').forEach(function (c) {
+    var ate = new Date(c.getAttribute('data-fim') + 'T00:00:00-03:00');
+    if (!isNaN(ate) && new Date() >= ate) { c.hidden = true; }
+  });
   document.addEventListener('click', function (e) {
     var a = e.target.closest('[data-produto]');
     if (a && window.dataLayer) {
