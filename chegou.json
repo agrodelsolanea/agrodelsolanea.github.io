@@ -1,36 +1,36 @@
 {
- "gerado_em": "2026-09-14T10:42:06-03:00",
+ "gerado_em": "2026-09-17T08:20:08-03:00",
  "itens": [
+  {
+   "nome": "Tesoura Poda Cb Long Tramontina",
+   "data": "2026-09-16",
+   "foto": "img/chegou/tesourapodacblongtramontina.jpg"
+  },
+  {
+   "nome": "Sacho Coração C/cb Tramontina",
+   "data": "2026-09-16",
+   "foto": "img/chegou/sachocoracaoccbtramontina.jpg"
+  },
+  {
+   "nome": "Perneira Seg 03 Talas PVC C/velcro Sayro",
+   "data": "2026-09-16",
+   "foto": "img/chegou/perneiraseg03talaspvccvelcrosayro.jpg"
+  },
+  {
+   "nome": "Pazinha Larga C/cb P/horticultura Tramontina",
+   "data": "2026-09-16",
+   "foto": "img/chegou/pazinhalargaccbphorticulturatramontina.jpg"
+  },
+  {
+   "nome": "Bota Pega Forte C Med S/f Pta/aml",
+   "data": "2026-09-16",
+   "foto": "img/chegou/botapegafortecmedsfptaaml.jpg"
+  },
   {
    "nome": "Carretel Automático Bate e Libera Toyama M10 X 125",
    "data": "2026-09-11",
    "foto": "img/chegou/carretelautomaticobateeliberatoyamam10x125.jpg"
-  },
-  {
-   "nome": "Lâmpada Led 50W 6500K Elgin",
-   "data": "2026-09-04",
-   "foto": "img/chegou/lampadaled50w6500kelgin.jpg"
-  },
-  {
-   "nome": "Bomba Anauger Sappo 800 Extreme 220V",
-   "data": "2026-09-04",
-   "foto": "img/chegou/bombaanaugersappo800extreme220v.jpg"
-  },
-  {
-   "nome": "Triturador FORRA2CV Biv Tramont TE25T",
-   "data": "2026-09-02",
-   "foto": "img/chegou/trituradorforra2cvbivtramontte25t.jpg"
-  },
-  {
-   "nome": "Substrato Plantio 3L Terral",
-   "data": "2026-08-27",
-   "foto": "img/chegou/substratoplantio3lterral.jpg"
-  },
-  {
-   "nome": "Semente H.rucula Cultiv.feltrin",
-   "data": "2026-08-27",
-   "foto": "img/chegou/sementehruculacultivfeltrin.jpg"
   }
  ],
- "outros": 100
+ "outros": 89
 }
