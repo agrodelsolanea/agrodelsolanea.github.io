@@ -1,36 +1,36 @@
 {
- "gerado_em": "2026-09-17T08:20:08-03:00",
+ "gerado_em": "2026-09-21T10:49:03-03:00",
  "itens": [
+  {
+   "nome": "Semente H.morango Ornamen.tops.",
+   "data": "2026-09-17",
+   "foto": "img/chegou/sementehmorangoornamentops.jpg"
+  },
+  {
+   "nome": "Semente H.couve Mantei.geor.top",
+   "data": "2026-09-17",
+   "foto": "img/chegou/sementehcouvemanteigeortop.jpg"
+  },
+  {
+   "nome": "Semente H.couve Flo.bola Nv.top",
+   "data": "2026-09-17",
+   "foto": "img/chegou/sementehcouveflobolanvtop.jpg"
+  },
+  {
+   "nome": "Semente Flor Helic/semp.viv.top",
+   "data": "2026-09-17",
+   "foto": "img/chegou/sementeflorhelicsempvivtop.jpg"
+  },
+  {
+   "nome": "Semente Flor Cravo Chabaud Sor",
+   "data": "2026-09-17",
+   "foto": "img/chegou/sementeflorcravochabaudsor.jpg"
+  },
   {
    "nome": "Tesoura Poda Cb Long Tramontina",
    "data": "2026-09-16",
    "foto": "img/chegou/tesourapodacblongtramontina.jpg"
-  },
-  {
-   "nome": "Sacho Coração C/cb Tramontina",
-   "data": "2026-09-16",
-   "foto": "img/chegou/sachocoracaoccbtramontina.jpg"
-  },
-  {
-   "nome": "Perneira Seg 03 Talas PVC C/velcro Sayro",
-   "data": "2026-09-16",
-   "foto": "img/chegou/perneiraseg03talaspvccvelcrosayro.jpg"
-  },
-  {
-   "nome": "Pazinha Larga C/cb P/horticultura Tramontina",
-   "data": "2026-09-16",
-   "foto": "img/chegou/pazinhalargaccbphorticulturatramontina.jpg"
-  },
-  {
-   "nome": "Bota Pega Forte C Med S/f Pta/aml",
-   "data": "2026-09-16",
-   "foto": "img/chegou/botapegafortecmedsfptaaml.jpg"
-  },
-  {
-   "nome": "Carretel Automático Bate e Libera Toyama M10 X 125",
-   "data": "2026-09-11",
-   "foto": "img/chegou/carretelautomaticobateeliberatoyamam10x125.jpg"
   }
  ],
- "outros": 89
+ "outros": 101
 }
