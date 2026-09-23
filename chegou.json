@@ -1,6 +1,11 @@
 {
- "gerado_em": "2026-09-21T10:49:03-03:00",
+ "gerado_em": "2026-09-23T08:20:07-03:00",
  "itens": [
+  {
+   "nome": "Lâmpada Led 50W 6500K Elgin",
+   "data": "2026-09-22",
+   "foto": "img/chegou/lampadaled50w6500kelgin.jpg"
+  },
   {
    "nome": "Semente H.morango Ornamen.tops.",
    "data": "2026-09-17",
@@ -25,12 +30,7 @@
    "nome": "Semente Flor Cravo Chabaud Sor",
    "data": "2026-09-17",
    "foto": "img/chegou/sementeflorcravochabaudsor.jpg"
-  },
-  {
-   "nome": "Tesoura Poda Cb Long Tramontina",
-   "data": "2026-09-16",
-   "foto": "img/chegou/tesourapodacblongtramontina.jpg"
   }
  ],
- "outros": 101
+ "outros": 98
 }
