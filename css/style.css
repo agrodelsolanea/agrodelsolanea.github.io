@@ -358,6 +358,12 @@ h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .6rem; }
   font-family: 'Archivo Black', sans-serif; font-size: 3rem; color: var(--verde-500);
 }
 .equipe-faixa { margin-top: 2.4rem; }
+@media (min-width: 641px) {
+  /* número ímpar de atendentes: o último card fica centralizado na linha */
+  .equipe-grid > .equipe-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1; justify-self: center; width: 100%; max-width: calc((100% - 1.4rem) / 2);
+  }
+}
 
 /* Forrageiras */
 .hero-forrageiras {
