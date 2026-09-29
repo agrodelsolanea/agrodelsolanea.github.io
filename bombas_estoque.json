@@ -1,9 +1,9 @@
 {
- "gerado_em": "2026-09-27T08:20:11-03:00",
- "dw_ate": "2026-09-26",
+ "gerado_em": "2026-09-29T08:20:11-03:00",
+ "dw_ate": "2026-09-28",
  "disponivel": {
   "s900": true,
-  "s800": false,
+  "s800": true,
   "s5g": true,
   "ecco": true,
   "cm60": true,
