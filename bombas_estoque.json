@@ -1,12 +1,12 @@
 {
- "gerado_em": "2026-09-30T08:20:11-03:00",
- "dw_ate": "2026-09-29",
+ "gerado_em": "2026-10-01T08:20:09-03:00",
+ "dw_ate": "2026-09-30",
  "disponivel": {
   "s900": true,
   "s800": true,
   "s5g": true,
   "ecco": true,
-  "cm60": true,
+  "cm60": false,
   "ferrari": false,
   "toyama": true
  }
