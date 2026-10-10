@@ -1,11 +1,36 @@
 {
- "gerado_em": "2026-10-08T08:20:07-03:00",
+ "gerado_em": "2026-10-10T12:13:50-03:00",
  "itens": [
   {
-   "nome": "Lâmpada Led 50W 6500K Elgin",
-   "data": "2026-09-22",
-   "foto": "img/chegou/lampadaled50w6500kelgin.jpg"
+   "nome": "Vassoura Jardim Plastica 22D S/cabo",
+   "data": "2026-10-06",
+   "foto": "img/chegou/vassourajardimplastica22dscabo.jpg"
+  },
+  {
+   "nome": "Tesoura P/cerca Viva",
+   "data": "2026-10-06",
+   "foto": "img/chegou/tesourapcercaviva.jpg"
+  },
+  {
+   "nome": "Picareta Chibanca 4 C/cabo 90CM",
+   "data": "2026-10-06",
+   "foto": "img/chegou/picaretachibanca4ccabo90cm.jpg"
+  },
+  {
+   "nome": "Pazinha Larga C/cabo Madeira",
+   "data": "2026-10-06",
+   "foto": "img/chegou/pazinhalargaccabomadeira.jpg"
+  },
+  {
+   "nome": "Forcado P/cascalho 10D C/cabo 71CM",
+   "data": "2026-10-06",
+   "foto": "img/chegou/forcadopcascalho10dccabo71cm.jpg"
+  },
+  {
+   "nome": "Enxadao Largo 2,5 S/cabo",
+   "data": "2026-10-06",
+   "foto": "img/chegou/enxadaolargo25scabo.jpg"
   }
  ],
- "outros": 88
+ "outros": 119
 }
