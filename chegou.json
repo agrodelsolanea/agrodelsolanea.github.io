@@ -1,6 +1,21 @@
 {
- "gerado_em": "2026-10-10T12:13:50-03:00",
+ "gerado_em": "2026-10-17T08:20:07-03:00",
  "itens": [
+  {
+   "nome": "Semente H.couve Manteiga Feltr.",
+   "data": "2026-10-17",
+   "foto": "img/chegou/sementehcouvemanteigafeltr.jpg"
+  },
+  {
+   "nome": "Semente H.alfac.cresp.verao Top",
+   "data": "2026-10-17",
+   "foto": "img/chegou/sementehalfaccrespveraotop.jpg"
+  },
+  {
+   "nome": "Botina Elast.b/pvc Prata Garra",
+   "data": "2026-10-17",
+   "foto": "img/chegou/botinaelastbpvcpratagarra.jpg"
+  },
   {
    "nome": "Vassoura Jardim Plastica 22D S/cabo",
    "data": "2026-10-06",
@@ -15,22 +30,7 @@
    "nome": "Picareta Chibanca 4 C/cabo 90CM",
    "data": "2026-10-06",
    "foto": "img/chegou/picaretachibanca4ccabo90cm.jpg"
-  },
-  {
-   "nome": "Pazinha Larga C/cabo Madeira",
-   "data": "2026-10-06",
-   "foto": "img/chegou/pazinhalargaccabomadeira.jpg"
-  },
-  {
-   "nome": "Forcado P/cascalho 10D C/cabo 71CM",
-   "data": "2026-10-06",
-   "foto": "img/chegou/forcadopcascalho10dccabo71cm.jpg"
-  },
-  {
-   "nome": "Enxadao Largo 2,5 S/cabo",
-   "data": "2026-10-06",
-   "foto": "img/chegou/enxadaolargo25scabo.jpg"
   }
  ],
- "outros": 119
+ "outros": 120
 }
