@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-17T08:20:07-03:00",
+ "gerado_em": "2026-10-19T10:41:10-03:00",
  "itens": [
   {
    "nome": "Semente H.couve Manteiga Feltr.",
@@ -12,6 +12,16 @@
    "foto": "img/chegou/sementehalfaccrespveraotop.jpg"
   },
   {
+   "nome": "Cadeado 35MM Pado Encartelado",
+   "data": "2026-10-17",
+   "foto": "img/chegou/cadeado35mmpadoencartelado.jpg"
+  },
+  {
+   "nome": "Cadeado 30MM Pado Encartelado",
+   "data": "2026-10-17",
+   "foto": "img/chegou/cadeado30mmpadoencartelado.jpg"
+  },
+  {
    "nome": "Botina Elast.b/pvc Prata Garra",
    "data": "2026-10-17",
    "foto": "img/chegou/botinaelastbpvcpratagarra.jpg"
@@ -20,17 +30,7 @@
    "nome": "Vassoura Jardim Plastica 22D S/cabo",
    "data": "2026-10-06",
    "foto": "img/chegou/vassourajardimplastica22dscabo.jpg"
-  },
-  {
-   "nome": "Tesoura P/cerca Viva",
-   "data": "2026-10-06",
-   "foto": "img/chegou/tesourapcercaviva.jpg"
-  },
-  {
-   "nome": "Picareta Chibanca 4 C/cabo 90CM",
-   "data": "2026-10-06",
-   "foto": "img/chegou/picaretachibanca4ccabo90cm.jpg"
   }
  ],
- "outros": 120
+ "outros": 115
 }
