@@ -1,36 +1,36 @@
 {
- "gerado_em": "2026-10-19T10:41:10-03:00",
+ "gerado_em": "2026-10-22T08:20:02-03:00",
  "itens": [
+  {
+   "nome": "Semente Coentro Verdão 500G Isla",
+   "data": "2026-10-21",
+   "foto": "img/chegou/sementecoentroverdao500gisla.jpg"
+  },
+  {
+   "nome": "Pulverizador 01,5L Bartofil",
+   "data": "2026-10-21",
+   "foto": "img/chegou/pulverizador015lbartofil.jpg"
+  },
+  {
+   "nome": "Lâmina Rocad 255X2,0X25,4MM C/videa Tekna",
+   "data": "2026-10-21",
+   "foto": "img/chegou/laminarocad255x20x254mmcvideatekna.jpg"
+  },
+  {
+   "nome": "Bota Pega Forte C Med S/f Pta/aml",
+   "data": "2026-10-21",
+   "foto": "img/chegou/botapegafortecmedsfptaaml.jpg"
+  },
+  {
+   "nome": "Bota Pega Forte C Curto S/f Pta/aml",
+   "data": "2026-10-21",
+   "foto": "img/chegou/botapegaforteccurtosfptaaml.jpg"
+  },
   {
    "nome": "Semente H.couve Manteiga Feltr.",
    "data": "2026-10-17",
    "foto": "img/chegou/sementehcouvemanteigafeltr.jpg"
-  },
-  {
-   "nome": "Semente H.alfac.cresp.verao Top",
-   "data": "2026-10-17",
-   "foto": "img/chegou/sementehalfaccrespveraotop.jpg"
-  },
-  {
-   "nome": "Cadeado 35MM Pado Encartelado",
-   "data": "2026-10-17",
-   "foto": "img/chegou/cadeado35mmpadoencartelado.jpg"
-  },
-  {
-   "nome": "Cadeado 30MM Pado Encartelado",
-   "data": "2026-10-17",
-   "foto": "img/chegou/cadeado30mmpadoencartelado.jpg"
-  },
-  {
-   "nome": "Botina Elast.b/pvc Prata Garra",
-   "data": "2026-10-17",
-   "foto": "img/chegou/botinaelastbpvcpratagarra.jpg"
-  },
-  {
-   "nome": "Vassoura Jardim Plastica 22D S/cabo",
-   "data": "2026-10-06",
-   "foto": "img/chegou/vassourajardimplastica22dscabo.jpg"
   }
  ],
- "outros": 115
+ "outros": 116
 }
