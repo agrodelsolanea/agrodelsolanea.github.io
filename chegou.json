@@ -1,6 +1,26 @@
 {
- "gerado_em": "2026-10-22T08:20:02-03:00",
+ "gerado_em": "2026-11-02T10:37:13-03:00",
  "itens": [
+  {
+   "nome": "Semente H.alho Poro Feltrin",
+   "data": "2026-10-29",
+   "foto": "img/chegou/sementehalhoporofeltrin.jpg"
+  },
+  {
+   "nome": "Triturador Forrageiro Elétrico TE25T com Motor de 2 HP 127/220",
+   "data": "2026-10-22",
+   "foto": "img/chegou/trituradorforrageiroeletricote25tcommotorde2hp127220.jpg"
+  },
+  {
+   "nome": "Mangueira Jardim Flex Especial Listrada em Pvc, Sem Engates,",
+   "data": "2026-10-22",
+   "foto": "img/chegou/mangueirajardimflexespeciallistradaempvcsemengates.jpg"
+  },
+  {
+   "nome": "Cabo de Madeira com 120 CM para Vassoura e Ancinho",
+   "data": "2026-10-22",
+   "foto": "img/chegou/cabodemadeiracom120cmparavassouraeancinho.jpg"
+  },
   {
    "nome": "Semente Coentro Verdão 500G Isla",
    "data": "2026-10-21",
@@ -10,27 +30,7 @@
    "nome": "Pulverizador 01,5L Bartofil",
    "data": "2026-10-21",
    "foto": "img/chegou/pulverizador015lbartofil.jpg"
-  },
-  {
-   "nome": "Lâmina Rocad 255X2,0X25,4MM C/videa Tekna",
-   "data": "2026-10-21",
-   "foto": "img/chegou/laminarocad255x20x254mmcvideatekna.jpg"
-  },
-  {
-   "nome": "Bota Pega Forte C Med S/f Pta/aml",
-   "data": "2026-10-21",
-   "foto": "img/chegou/botapegafortecmedsfptaaml.jpg"
-  },
-  {
-   "nome": "Bota Pega Forte C Curto S/f Pta/aml",
-   "data": "2026-10-21",
-   "foto": "img/chegou/botapegaforteccurtosfptaaml.jpg"
-  },
-  {
-   "nome": "Semente H.couve Manteiga Feltr.",
-   "data": "2026-10-17",
-   "foto": "img/chegou/sementehcouvemanteigafeltr.jpg"
   }
  ],
- "outros": 116
+ "outros": 92
 }
