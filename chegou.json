@@ -1,6 +1,11 @@
 {
- "gerado_em": "2026-11-04T08:20:12-03:00",
+ "gerado_em": "2026-11-10T08:20:07-03:00",
  "itens": [
+  {
+   "nome": "Bomba Anauger Sappo 900 Extreme 220V",
+   "data": "2026-11-09",
+   "foto": "img/chegou/bombaanaugersappo900extreme220v.jpg"
+  },
   {
    "nome": "Semente H.alho Poro Feltrin",
    "data": "2026-11-03",
@@ -25,12 +30,7 @@
    "nome": "Semente Coentro Verdão 500G Isla",
    "data": "2026-10-21",
    "foto": "img/chegou/sementecoentroverdao500gisla.jpg"
-  },
-  {
-   "nome": "Pulverizador 01,5L Bartofil",
-   "data": "2026-10-21",
-   "foto": "img/chegou/pulverizador015lbartofil.jpg"
   }
  ],
- "outros": 92
+ "outros": 90
 }
