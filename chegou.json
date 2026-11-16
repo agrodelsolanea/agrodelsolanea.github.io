@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-13T08:20:07-03:00",
+ "gerado_em": "2026-11-16T10:38:23-03:00",
  "itens": [
   {
    "nome": "Sacho Coração C/cb Tramontina",
@@ -12,6 +12,11 @@
    "foto": "img/chegou/conjphortajard3pctramontina.jpg"
   },
   {
+   "nome": "Aspersor Agropolo Micro MC20 2,4MM Verm 317L/H 9876",
+   "data": "2026-11-11",
+   "foto": "img/chegou/aspersoragropolomicromc2024mmverm317lh9876.jpg"
+  },
+  {
    "nome": "Bomba Anauger Sappo 900 Extreme 220V",
    "data": "2026-11-09",
    "foto": "img/chegou/bombaanaugersappo900extreme220v.jpg"
@@ -22,5 +27,5 @@
    "foto": "img/chegou/sementehalhoporofeltrin.jpg"
   }
  ],
- "outros": 71
+ "outros": 68
 }
