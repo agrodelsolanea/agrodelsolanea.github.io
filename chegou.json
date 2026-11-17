@@ -1,6 +1,11 @@
 {
- "gerado_em": "2026-11-16T10:38:23-03:00",
+ "gerado_em": "2026-11-17T08:20:07-03:00",
  "itens": [
+  {
+   "nome": "Carretel Automático Bate e Libera Toyama M10 X 125",
+   "data": "2026-11-16",
+   "foto": "img/chegou/carretelautomaticobateeliberatoyamam10x125.jpg"
+  },
   {
    "nome": "Sacho Coração C/cb Tramontina",
    "data": "2026-11-11",
@@ -27,5 +32,5 @@
    "foto": "img/chegou/sementehalhoporofeltrin.jpg"
   }
  ],
- "outros": 68
+ "outros": 79
 }
